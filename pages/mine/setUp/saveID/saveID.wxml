@@ -1,0 +1,3 @@
+<import src='../saveName/saveName'/>
+<template is='save'/>
+ <view class='careful'>注：填写身份号便于清关，身份信息严格保密，请放心</view>

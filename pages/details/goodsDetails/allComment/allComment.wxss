@@ -1,0 +1,2 @@
+@import "../../../common/common.wxss";
+@import "../goodsDetails.wxss";

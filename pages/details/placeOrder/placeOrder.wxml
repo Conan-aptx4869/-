@@ -1,0 +1,88 @@
+<form bindsubmit="bindFormSubmit">
+        <view class="receipt_info" bindtap="selectAddressTap">
+                <image src='/imgs/icon/addr.png' class='address_icon'></image>
+                <view class='content'>
+                        <view class='name'>收货人：{{contacts}}</view>
+                        <view class='address'>{{province_name}}{{city_name}}{{area_name}} {{address}}</view>
+
+                </view> 
+                <image src='/imgs/icon/more.png' class='more'></image>
+        </view>
+
+        <view class='goodsInfo'>
+                <view class='title'>
+                        <image src='/imgs/icon/buy.png'></image>
+                        已选商品
+                </view>
+                <view class='content' wx:for="{{goods_list}}">
+                        <image src='{{item.cover}}'></image>
+                        <view class='info'>
+                                <view class='name'>
+                                        {{item.goods_name}}
+                                </view>
+                                <view class='goods_attr'>
+                                        <view>{{item.goods_attr_desc}}</view>
+                                        <view class='number'>X {{item.number}} </view>
+                                </view>
+
+                                <view class='price'> ￥ {{item.price}}</view>
+                        </view>
+                </view>
+        </view>
+
+        <view class='discount_type'>
+                <view class='title'>优惠方式（您最多只能选择一种优惠方式）</view>
+                <radio-group class="radio-group" bindchange="radioChange">
+                        <label class="radio">
+                                不使用任何优惠方式
+                                <radio value="1" checked="" color='#ff5622' />
+                        </label>
+                        <label class="radio">
+                                折扣卡优惠(结算时需填写折扣卡号）
+                                <radio value="2" checked="" color='#ff5622' />
+                        </label>
+                        <label class="radio">
+                                使用积分(使用{{available_integral}}积分，抵{{integral_ded_amounts}}元现金）
+                                <radio value="3" checked="" color='#ff5622' />
+                        </label>
+                        <label class="radio">
+                                使用返券(同类或同种商品进可使用一张）
+                                <radio value="4" checked="" color='#ff5622' />
+                        </label>
+                </radio-group>
+        </view>
+
+        <view class='info_list'>
+                <view class='item'>
+                        <text class='key'>商品总额</text>
+                        <text class='value'>￥ {{goods_amounts}}</text>
+                </view>
+                <view class='item'>
+                        <text class='key'>优惠</text>
+                        <text class='value'>-￥ {{discount_amounts}}</text>
+                </view>
+                <view class='item'>
+                        <text class='key'>运费</text>
+                        <text class='value'>+￥ {{freight}}</text>
+                </view>
+                <view class='item'>
+                        <text class='key'>合计</text>
+                        <text class='value'>￥ {{pay_amounts}}</text>
+                </view>
+        </view>
+
+
+        <view class='message'>
+                <image src='/imgs/icon/address.png'></image>
+                买家留言
+
+                <view class='content'>
+                        <textarea placeholder="亲，还有什么可以帮助到你的吗？就写到这里吧！" name="textarea" value='' />
+                </view>
+        </view>
+
+
+
+        <button form-type="submit" data-cardNum="{{cardNum}}" data-m_cpn_id="{{m_cpn_id}}" data-uer_itg="{{uer_itg}}" data-discount_amounts="{{discount_amounts}}"> 立即支付 </button>
+
+</form>

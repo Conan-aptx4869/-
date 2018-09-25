@@ -1,0 +1,29 @@
+@import "../../common/common.wxss";
+.tab {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        background: #fff;
+}
+
+.tab .tab_item {
+        width: 50%;
+        height: 85rpx;
+        line-height: 85rpx;
+        text-align: center;
+}
+.tab .selected{
+        color: #ff5722;
+}
+.rule {
+        display: block;
+        color: #ff5722;
+        margin: 25rpx 20rpx 25rpx 0;
+        text-align: right;
+}
+
+
+
+
+
+

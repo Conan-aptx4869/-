@@ -1,0 +1,21 @@
+<view class="guessing_graph">
+        <image src='{{pictures}}' mode="widthFix"></image>
+</view>
+
+<view class='guess_form'>
+        <view class='title'>
+                您的回答: {{answer}}
+                <text bindtap='ruleTap'>活动规则</text>
+        </view>
+        <view class='subtitle'>{{msg}}</view>
+
+        <view class='type_btn' bindtap='homrPageTap'>{{msg_button}}</view>
+</view>
+
+<text class='info' wx:if="{{is_luck==1}}">{{notice}}</text>
+<view class='answer_record' wx:elif="{{is_luck==0}}">
+        <view class='title' wx:if="{{licky_list.length>0}}">中奖名单</view>
+        <view class='item' wx:for="{{licky_list}}">
+                {{item.nickname}} &nbsp;&nbsp; {{item.mobile}}
+        </view>
+</view>

@@ -1,0 +1,58 @@
+<view class="card_list coupon_list">
+        <view class='item'>
+                <view class='name'>积分兑换-{{goodsType==0?"卡券":"商品"}}
+                        <text>-{{price}}</text>
+                </view>
+                <view class='date'>{{pay_time}}
+                </view>
+                <!--优惠券  -->
+                <view class='coupon_item ava' data-goods_id="{{goods_id}}" ata-goods_type="{{goods_type}}" wx:if="{{goods_type==0}}">
+                        <view class='money'>
+                                <text class='symbol'>￥</text>
+                                <text class='num'>{{face_value}}</text>
+                                <view class='condition'>{{use_condition}}</view>
+                        </view>
+                        <view class='info'>
+                                <text class='icon'>优惠</text>
+                                <view class='content'>
+                                        {{can_use}}
+                                        <view class='time'>
+                                                {{effective_date}}-{{invalid_date}}
+                                        </view>
+                                </view>
+                        </view>
+                        <view class='explain'>
+                                {{desc}}
+                        </view>
+                </view>
+                <!--优惠券  -->
+
+                <!--商品实物  -->
+                <view class='goodsInfo' data-goods_id="{{goods_id}}" data-goods_type="{{goods_type}}" wx:elif="{{goods_type==1}}">
+                        <view class='title'>
+                                <image src='/imgs/icon/buy.png'></image>
+                                兑换商品
+                        </view>
+                        <view class='content'>
+                                <image src='{{cover}}'></image>
+                                <view class='info'>
+                                        <view class='name'>
+                                                {{goods_name}}
+                                        </view>
+                                        <view class='number'>X {{number}}</view>
+                                        <view class='price'>{{price}} 积分</view>
+                                </view>
+                        </view>
+                        <view class='title'>
+                                <image src='/imgs/icon/message.png'></image>
+                                配送地址
+                        </view>
+
+                        <view class='address'>
+                                {{province_name}}{{city_name}}{{area_name}}  {{address}}  {{consignee}}  {{mobile}}
+                        </view>
+                </view>
+                <!--商品实物  -->
+        </view>
+
+</view>

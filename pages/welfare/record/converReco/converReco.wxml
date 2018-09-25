@@ -1,0 +1,22 @@
+<view class='inte' wx:for-item="item">
+        <view class='title'>
+                <view class='inte_num'>{{grade_sign}}</view>
+                <view class='title_text'>
+                        {{grade_name}}
+                        <text>{{growth_value}}</text>
+                </view>
+        </view>
+        <view class='inte_list'>
+                <view class='item' bindtap='exchTap' wx:for="{{list}}" wx:for-item="items" data-goodsId="{{items.goods_id}}" data-grade="{{items.m_grade}}">
+                        <image src='{{items.cover}}' class='photo'></image>
+                        <view class='name'>{{items.goods_name}}</view>
+                        <text class='num'>{{items.price}} 积分</text>
+                        <view class='btn' wx:if="{{items.lock_type==1}}">立即兑换</view>
+                        <view class='btn un' wx:else>未解锁</view>
+                </view>
+
+
+
+        </view>
+</view>
+<view class='noBody' wx:if="{{noBody==true}}">已到页面底部，没有更多数据了</view>

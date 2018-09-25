@@ -1,0 +1,28 @@
+<view class="tab">
+        <view class='tab_item' bindtap='tab' data-type="Y" >可用优惠券（{{total}}）</view>
+        <view class='tab_item' bindtap='tab' data-type="N">不可用优惠券（{{unTatal}}）</view>
+</view>
+<view class='rule' bindtap='ruleTap'>使用规则</view>
+<view class='coupon_list'>
+        <view class='coupon_item  {{type=="Y"?"ava":"unava"}}' wx:for="{{list}}" data-id="{{item.m_cpn_id}}" data-status='{{item.status}}'>
+                <view class='money'>
+                        <text class='symbol'>￥</text>
+                        <text class='num'>{{item.face_value}}</text>
+                        <view class='condition'>{{item.use_condition}}</view>
+                </view>
+                <view class='info'>
+                        <text class='icon'>优惠</text>
+                        <view class='content'>
+                                {{item.desc}}
+                                <view class='time'>
+                                        {{item.invalid_date}}-{{item.effective_date}}
+                                </view>
+                        </view>
+                </view>
+                <view class='explain'>
+                        {{item.can_use}}
+                </view>
+        </view>
+</view>
+
+<view class='noBody' wx:if="{{noBody==true}}">已到页面底部，没有更多数据了</view>

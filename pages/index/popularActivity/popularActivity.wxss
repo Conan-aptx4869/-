@@ -1,0 +1,19 @@
+@import "../../common/common.wxss";
+@import "../classicDetail/classicDetail";
+.banner {
+        font-size: 0;
+}
+.banner image {
+        width: 100%;
+}
+
+
+.head {
+        position: absolute;
+        width: 100%;
+        z-index: 6;
+}
+
+.goods_listy {
+        margin-top: 390rpx;
+}

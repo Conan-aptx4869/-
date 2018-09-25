@@ -1,0 +1,52 @@
+@import "../../common/common.wxss";
+
+page {
+        padding: 0.1rpx;
+}
+
+.classic_list {
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: #fff;
+        background-color: #999;
+}
+.classic_list .see {
+        height: 200rpx;
+        width: 100%;
+        display: flex;
+        color: #999;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        line-height: 55rpx;
+        background: #fff;
+}
+
+.classic_list .see text {
+        border-bottom: 1px solid #999;
+}
+
+.goods_listy {
+        margin-top:389rpx;
+}
+
+.goods_listy .item {
+        position: relative;
+}
+
+.goods_listy .item .fab {
+        width: 30rpx;
+        height: 28rpx;
+        position: absolute;
+        right: 60rpx;
+        top: 40rpx;
+}
+
+
+.head {
+        position: absolute;
+        width: 100%;
+        z-index: 6;
+        left: 0;
+        top: 0;
+}

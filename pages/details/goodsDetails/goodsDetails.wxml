@@ -1,0 +1,142 @@
+<import src="../../../wxParse/wxParse" />
+
+<template name="comment_list">
+        <view class='item'>
+                <view class='head'>
+                        <image src='{{item.head}}' class='avatar'></image>
+                        <text class='name'>{{item.nickname}} </text>
+                        <text class='date'>{{item.create_time}}</text>
+                        <view class='score'>
+                                <block wx:for="{{item.level}}">
+                                        <image src='/imgs/icon/star_s.png'></image>
+                                </block>
+                                <block wx:for="{{item.unlevel}}">
+                                        <image src='/imgs/icon/star.png'></image>
+                                </block>
+                        </view>
+                </view>
+                <view class='text'>
+                        {{item.content}}
+                </view>
+                <view class='photo'>
+                        <image src='{{items.abs_url}}' wx:for="{{item.pictures}}" wx:for-item="items" data-src="{{items.abs_url}}" bindtap='previewImage'></image>
+                </view>
+        </view>
+</template>
+
+<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-active-color="#fff" style="height:{{imgheights[current]}}rpx;">
+        <swiper-item wx:for="{{imgUrls}}">
+                <image src="{{item.abs_url}}" class="slide-image" mode="widthFix" data-id="{{item.id}}" bindload="imageLoad" data-id='{{index}}' />
+        </swiper-item>
+
+</swiper>
+<button open-type='contact' id='service'>
+        <image src='/imgs/icon/service.png' class='icon' mode='widthFix'></image>
+</button>
+
+<view class='goods_name'>
+        {{goods_name}}
+        <view class='surplus'>剩余: {{stock
+                <=-1? "无库存":stock}}</view>
+        </view>
+
+        <view class='price'>
+                <view class='new_price'>
+                        ￥{{price}}
+                        <text>￥{{market_price}}</text>
+                </view>
+                <view class='discount' wx:if="{{cardPrice!=undefiend}}">
+                        <view>折扣卡价: ￥{{cardPrice}}</view>
+                </view>
+        </view>
+
+        <view class='good_info'>
+                <view class='selected'>
+                        已选
+                        <text wx:for="{{isIdArr}}">{{item.text}}</text>
+                </view>
+
+                <view class='section' wx:for="{{goods_attr}}" data-attrId="{{item.attr_id}}" wx:for-index="index">
+                        <view class='title'>{{item.attr_name}}</view>
+                        <view class='lable'>
+                                <text class='item {{idx==attrArr[index]?"current":""}}' wx:for="{{item.attr_values}}" wx:for-index="idx" wx:for-item="items" data-sid="{{idx}}" data-pid="{{index}}" data-text="{{items.attr_value}}" bindtap='selecteSpeTap' data-goods_attrId="{{items.goods_attr_id}}"
+                                        data-goods_attrPrice="{{items.goods_attr_price}}">{{items.attr_value}}</text>
+                        </view>
+                </view>
+
+
+
+                <view class='section'>
+                        <view class='title'>数量</view>
+                        <view class='lable'>
+                                <view class='num'>
+                                        <text class='subtract' bindtap='subTap'>-</text>
+                                        <input type='text' value='{{number}}' disabled='disbled' />
+                                        <text class='add' bindtap='addTap'>+</text>
+                                </view>
+                        </view>
+                </view>
+        </view>
+
+
+        <view class='section address'>
+                <view class='title'>送至</view>
+
+                <view class='lable' bindtap='addressTap' wx:if="{{adr_id == undefined || adr_id == ''}}">您还没有选择默认地址，去选择{{adr_id}}</view>
+
+                <view class='lable' bindtap='addressTap' wx:else>{{province_name}}{{city_name}}{{area_name}} {{address}}</view>
+
+        </view>
+
+        <view class='goods_details'>
+                <view class='title'>商品详情</view>
+                <view class='text'>
+                        <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+                </view>
+        </view>
+
+
+
+
+        <view class='goods_comment'>
+                <view class='title'>
+                        商品评价（{{comm_count}}）
+                        <view class='all' bindtap='allCommentTap' data-goodsId="{{goods_id}}">
+                                <text>查看全部 </text>
+                                <image src='/imgs/icon/more.png' class='more'></image>
+                        </view>
+                </view>
+                <view class='comment_list'>
+                        <block wx:for="{{comments_list}}">
+                                <template is="comment_list" data="{{item}}" />
+                        </block>
+                </view>
+        </view>
+
+        <view class='footer_bar'>
+                <view class='made1'>
+                        <!-- <view>
+                                <button open-type='contact'>
+                                        <image src='/imgs/icon/service.png' class='icon'></image>
+                                        <text class='t'>客服</text>
+                                </button>
+                        </view> -->
+                        <view bindtap='shoppingCart'>
+                                <image src='/imgs/icon/shop_car.png'></image>
+                                <text class='num' wx:if="{{carts!=0}}">{{carts}}</text>
+                                <text class='t'>购物车</text>
+                        </view>
+                        <view bindtap='collectionTap'>
+                                <image src='{{is_coll==0?"/imgs/icon/uncollection.png":"/imgs/icon/collection.png"}}'></image>
+                                <text class='t'>收藏</text>
+                        </view>
+                </view>
+                <view class='made2'>
+                        <view class='push_car' bindtap='addShopCart' data-number="{{number}}">
+                                加入购物车
+                        </view>
+                        <view class='buy' bindtap='spnedTap' data-cardNum="{{cardNum}}" data-activity="{{activity}}">
+                                立即购买
+                        </view>
+                </view>
+        </view>

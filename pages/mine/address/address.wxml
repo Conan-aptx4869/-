@@ -1,0 +1,41 @@
+<view class="address_list">
+        <radio-group class="radio-group" bindchange="radioChange">
+                <view class="item"  wx:for="{{address_list}}" data-adr_id="{{item.adr_id}}"  >
+                        <view class="address">
+                                <text class="name">{{item.contacts}}</text>
+                                <text class="tel">{{item.mobile}}</text>
+                        </view>
+                        <view class="address_info">
+                                {{item.province_name}}{{item.city_name}}{{item.area_name}} {{item.address}} 
+                        </view>
+                        <view class="opera">
+                                <view class="radio">
+                                        <label>
+                                                <radio value="{{item.adr_id}}" checked="{{item.checked}}" color='#ff5722' data-name="111" names="222"/> 设为默认
+                                        </label>
+                                </view>
+
+
+                                <view class='made'>
+                                        <view class="edit" bindtap='editTap' data-adr_id="{{item.adr_id}}">
+                                                <image src="/imgs/icon/edit.png"></image>
+                                                编辑
+                                        </view>
+                                        <view class="detele" bindtap='deteleTap' data-adr_id="{{item.adr_id}}"  data-cid="{{index}}">
+                                                <image src="/imgs/icon/detele.png"></image>
+                                                删除
+                                        </view>
+                                </view>
+
+                        </view>
+                </view>
+        </radio-group>
+</view>
+
+<view class='add_address' bindtap='editTap'>
+        新增收货地址
+        <text>（最多可添加10个地址）</text>
+</view>
+
+
+

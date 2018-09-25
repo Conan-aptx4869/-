@@ -1,0 +1,7 @@
+<import src='/wxParse/wxParse'/>
+<view class="help_list">
+        <view class='item' wx:for="{{list}}" bindtap='helpDetail' data-artId="{{item.art_id}}">
+                <view class='name'>{{item.title}}</view>
+                <textarea disabled='disabled' value='{{item.content}}' auto-height="true"></textarea>  
+        </view>
+</view>

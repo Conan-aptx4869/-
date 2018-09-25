@@ -1,0 +1,60 @@
+@import "../../../common/common.wxss";
+
+.order_num {
+        background: #fff;
+}
+.state {
+        margin-bottom: 20rpx;
+        background: #fff;
+}
+
+.buy_goods {
+        background: #fff;
+}
+
+.detail_title {
+        height: 100rpx;
+        border-bottom: 1px solid #ccc;
+        line-height: 100rpx;
+        padding-left: 30rpx;
+}
+
+.detail_title image {
+        width: 33rpx;
+        height: 37rpx;
+        vertical-align: middle;
+        margin-right: 10rpx;
+}
+
+.total_com {
+        margin: 20rpx 0;
+        background: #fff;
+}
+
+.total_com .item {
+        padding: 0 25rpx;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        height: 85rpx;
+        line-height: 85rpx;
+        border-bottom: 1px solid #ccc;
+}
+
+.total_com .item .money {
+        color: #ff5722;
+}
+
+.address {
+        background: #fff;
+        padding-bottom: 30rpx;
+}
+.address .add_detail {
+        margin: 30rpx auto;
+        width: 680rpx;
+        padding: 25rpx 30rpx;
+        border: 1px solid #ccc;
+        background: #f5f5f5;
+        border-radius: 8rpx;
+       
+}

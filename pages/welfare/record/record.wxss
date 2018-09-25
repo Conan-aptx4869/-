@@ -1,0 +1,16 @@
+@import "../../common/common.wxss";
+ .item {
+        width: 710rpx;
+        margin: 20rpx auto;
+        background: #fff;
+        padding: 15rpx 20rpx 20rpx 20rpx;
+}
+.item .name text{
+        float: right;
+        color: #ff5722;
+       
+}
+ .item .date{
+        margin-top: 15rpx;
+        font-size: 22rpx;
+}

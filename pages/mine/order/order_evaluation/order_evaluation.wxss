@@ -1,0 +1,120 @@
+@import "../../../common/common.wxss";
+
+.box {
+        width: 695rpx;
+        border-radius: 12rpx;
+        padding: 20rpx;
+        background: #fff;
+        margin: 30rpx auto 20rpx;
+}
+
+.evaGoodsInfo {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+}
+
+.evaGoodsInfo .goodsName {
+        width: 495rpx;
+        line-height: 45rpx;
+}
+
+.evaGoodsInfo image {
+        width: 115rpx;
+        height: 115rpx;
+}
+
+.grade .icon {
+        width: 25rpx;
+        height: 28rpx;
+        vertical-align: -3rpx;
+        color: #404040;
+}
+
+.grade .start {
+        display: inline-block;
+        vertical-align: -3rpx;
+        margin-left: 45rpx;
+}
+
+.grade .start image {
+        width: 32rpx;
+        height: 32rpx;
+        margin-right: 15rpx;
+}
+
+.upLoadPic {
+        padding: 40rpx 50rpx;
+}
+
+.upLoadPic .content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+}
+.upLoadPic .text{
+        margin-top: 30rpx;
+        color: #404040;
+}
+.upLoadPic .subPic {
+        width: 63rpx;
+        height: 62rpx;
+}
+
+button {
+        width: 630rpx;
+        height: 90rpx;
+        border-radius: 12rpx;
+        background: #ff5722;
+        color: #fff;
+        margin: 90rpx auto 0;
+}
+
+.sss image {
+        width: 20rpx;
+        height: 20rpx;
+}
+
+.gallery {
+        width: 630rpx;
+        margin: 0 auto;
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+}
+
+/*每张图片所占容器*/
+
+.gallery .item {
+        margin: 0 10rpx 15rpx 10rpx;
+        position: relative;
+}
+
+.gallery .item image {
+        width: 150rpx;
+}
+
+/*add按钮*/
+
+.addIcon {
+        position: relative;
+        width: 65rpx;
+        height: 55rpx;
+        margin-right: 15rpx;
+}
+
+/*删除按钮*/
+
+.delete {
+        position: absolute;
+        right: 0;
+        top: 0;
+        background: #fff;
+        opacity: 1;
+        height: 36rpx;
+        line-height: 36rpx;
+        font-size: 40rpx;
+        font-weight: 700;
+}
+
+

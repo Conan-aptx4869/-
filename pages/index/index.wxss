@@ -1,0 +1,159 @@
+@import "../common/common.wxss";
+page{
+        background: #fff;
+}
+.tab {
+        white-space:nowrap;
+        overflow-x: scroll;
+        background: #fff;
+}
+
+.tab .tab_item {
+        width: 100rpx;
+        height: 90rpx;
+        line-height: 90rpx;
+        text-align: center;
+        font-size: 30rpx;
+        display: inline-block;
+        margin-left: 70rpx;
+}
+
+.tab .currnet {
+        border-bottom: 4px solid black;
+}
+
+.tab_container swiper swiper-item {
+        width: 100%;
+}
+
+.tab_container swiper swiper-item image {
+        width: 100%;
+}
+
+.handle {
+        width: 710rpx;
+        margin: auto;
+        padding: 20rpx 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background: #fff;
+}
+
+.handle .cust {
+        width: 350rpx;
+        height: 435rpx;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        font-size: 22rpx;
+        color: #333;
+        font-weight: bold;
+        padding: 80rpx 0 0 20rpx;
+        line-height: 35rpx;
+}
+
+.handle .cust .title {
+        font-size: 32rpx;
+        color: black;
+}
+
+.handle .right_handle {
+        width: 350rpx;
+        height: 435rpx;
+}
+
+.handle .top_handle {
+        display: flex;
+        width: 350rpx;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 10rpx;
+}
+
+.handle .top_handle .section {
+        padding: 25rpx 0 0 15rpx;
+        width: 170rpx;
+        height: 220rpx;
+        font-size: 32rpx;
+        color: black;
+        line-height: 35rpx;
+        font-weight: bold;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+}
+
+.handle .top_handle .section text {
+        font-size: 18rpx;
+        display: block;
+}
+
+.handle  .activity {
+        width: 100%;
+        height: 205rpx;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+}
+
+.adv image {
+        width: 100%;
+}
+
+.scroll_goods {
+        padding: 25rpx 0;
+        background: white;
+        overflow-x: scroll;
+        white-space: nowrap;
+}
+
+.scroll_goods .item {
+        width: 200rpx;
+        font-size: 22rpx;
+        display: inline-block;
+        vertical-align: top;
+        margin: 0 35rpx;
+        white-space: normal;
+}
+
+.scroll_goods .item image {
+        width: 100%;
+        height: 200rpx;
+        margin-bottom: 25rpx;
+}
+
+.scroll_goods .item .old_price {
+        text-decoration: line-through;
+        color: #666;
+}
+
+.scroll_goods .item .new_price {
+        display: inline-block;
+        margin: 10rpx 10rpx 10rpx 0;
+}
+
+.scroll_goods .item  .limit {
+        background: #ff5722;
+        color: #fff;
+        padding: 3rpx 10rpx;
+        display: inline-block;
+}
+
+
+.classic_title{
+        font-size: 32rpx;
+        text-align: center;
+        font-weight: bold;
+        margin-top: 50rpx;
+}
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,107 @@
+@import "../../../common/common.wxss";
+
+form {
+        display: block;
+}
+
+form  .item {
+        padding: 0 20rpx;
+        height: 85rpx;
+        line-height: 85rpx;
+        border-bottom: 1px solid #e0e0e0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        font-size: 26rpx;
+        background: #fff;
+}
+
+form  .item .title {
+        width: 135rpx;
+}
+
+form .item input {
+        height: 100%;
+        width: 565rpx;
+}
+
+form .item .label {
+        width: 565rpx;
+}
+
+form .item   picker {
+        width: 565rpx;
+}
+
+form .item .label text {
+        border: 1px solid #ccc;
+        padding: 5rpx 20rpx;
+        margin-right: 15rpx;
+}
+
+form button {
+        color: #fff;
+        width: 550rpx;
+        border-radius: 12rpx;
+        background: #ff5722;
+        margin: 35rpx auto;
+}
+
+/*picker  */
+
+.citypickers {
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        min-height: 100%;
+        background-color: red;
+}
+
+.citybody {
+        background: #f7f7f7;
+        width: 100%;
+}
+
+.citybody {
+        position: fixed;
+        bottom: 0px;
+        z-index: 5;
+        height: 400rpx;
+        border-top: 1px solid #f7f7f7;
+}
+
+.cityheader {
+        position: absolute;
+        top: 0px;
+        width: 100%;
+        z-index: 4;
+        background: #fff;
+}
+
+picker-view-column view {
+        text-align: center;
+}
+
+.city-cancel {
+        float: left;
+        margin: 20rpx;
+        color: #818181;
+}
+
+.city-true {
+        float: right;
+        margin: 20rpx;
+        color: #ff5722;
+}
+
+.section .picker {
+        background-color: #fff;
+        border-bottom: 1px #d9d9d9 solid;
+        border-top: 1px #d9d9d9 solid;
+        padding: 20rpx;
+}
+
+.selected{
+        border: 1px solid #ff5722 !important;
+        color: #ff5722  !important;
+}

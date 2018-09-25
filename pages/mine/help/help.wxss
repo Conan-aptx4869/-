@@ -1,0 +1,20 @@
+@import"../../common/common.wxss";
+@import "/wxParse/wxParse.wxss";
+.help_list{
+        margin-top: 20rpx;
+}
+.help_list .item{
+        margin-bottom: 10rpx;
+        background: #fff;
+        padding: 25rpx 20rpx;
+}
+.help_list .item .name{
+        margin-bottom: 20rpx;
+        font-size: 32rpx;
+        font-weight: bold;
+}
+.help_list .item  textarea{
+        width: 100%;
+        font-size: 26rpx;
+     
+}

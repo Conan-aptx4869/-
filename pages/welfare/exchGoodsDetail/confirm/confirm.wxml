@@ -1,0 +1,43 @@
+<view class="receipt_info" bindtap="selectAddressTap">
+        <image src='/imgs/icon/addr.png' class='address_icon'></image>
+        <view class='content'>
+                <view class='name'>收货人：{{contacts}}</view>
+                <view class='address'>{{province_name}}{{city_name}}{{area_name}} {{address}}</view>
+        </view>
+        <image src='/imgs/icon/more.png' class='more'></image>
+</view>
+
+<view class='goodsInfo'>
+        <view class='title'>
+                <image src='/imgs/icon/buy.png'></image>
+                兑换商品
+        </view>
+        <view class='content'>
+                <image src='{{cover}}'></image>
+                <view class='info'>
+                        <view class='name'>
+                                {{goods_name}}
+                        </view>
+                        <view class='number'>X 1</view>
+                        <view class='price'>{{price}} 积分</view>
+                </view>
+        </view>
+</view>
+
+
+
+<view class="exchange yes" bindtap='nowTap'>立即兑换</view>
+
+
+<!--兑换成功弹窗  -->
+<view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+<view class="modal-dialog" wx:if="{{showModal}}">
+        <view class="modal-content">
+                <image class='photo' src="{{item.abs_url}}" wx:for="{{advert}}" data-adId="{{item.ad_id}}" data-targetRule="{{item.target_rule}}" data-param="{{item.param}}"></image>
+                <view class='text2'>{{message}}</view>
+        </view>
+        <view class="modal-footer">
+                <view class="btn-confirm" bindtap="onConfirm" data-status="confirm">确定</view>
+        </view>
+</view>
+<!--兑换成功弹窗  -->

@@ -1,0 +1,22 @@
+@import "../../common/common.wxss";
+page{
+        background: #fff;
+}
+.set_list .item{
+        color: #999;
+        border-bottom: 1px solid #ccc;
+        padding: 30rpx 20rpx;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+}
+.set_list .item .avatar{
+        width: 90rpx;
+        height: 90rpx;
+        border-radius: 50%;
+}
+.set_list .item .more{
+        width: 12rpx;
+        height: 20rpx;
+}

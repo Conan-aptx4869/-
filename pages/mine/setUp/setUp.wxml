@@ -1,0 +1,30 @@
+<view class="set_list">
+        <view class='item' bindtap='uploadImg'>
+                头像
+                 <image src='{{avatarSrc}}' class='avatar'></image>
+        </view>
+        <view class='item' bindtap='nameSaveTap'>
+                昵称 
+                <view>
+                        {{name==""?"起个名字吧":name}} <image src='/imgs/icon/more.png' class='more'></image>
+                </view>
+        </view>
+        <view class='item' bindtap='idSaveTap'>
+                 身份信息
+                <view>
+                       {{idNum==0?"填写身份证号以便清关，身份信息保密":idNum}} <image src='/imgs/icon/more.png' class='more'></image>
+                </view>
+        </view>
+        <view class='item' bindtap='telNumberTap'>
+               手机号
+                <view>
+                        {{telNumber==0?"请输入手机号":telNumber}} <image src='/imgs/icon/more.png' class='more'></image>
+                </view>
+        </view>
+        <view class='item' bindtap='mailTap'>
+                绑定邮箱
+                <view>
+                     {{mail==0?"请输入邮箱号":mail}} <image src='/imgs/icon/more.png' class='more'></image>
+                </view>
+        </view>
+</view>

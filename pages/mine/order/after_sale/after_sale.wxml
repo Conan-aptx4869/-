@@ -1,0 +1,20 @@
+<view class="goods" wx:for="{{goods_list}}">
+        <image src='{{item.cover}}'></image>
+        <view class='content'>
+                <view class='name'>{{item.goods_name}}</view>
+                <view class='num'>X {{item.number}}</view>
+
+        </view>
+</view>
+
+<view class='apply'>
+        <view class='item' data-type='tk' bindtap='saleTap' data-order_id="{{order_id}}">
+                申请退款
+                <image src='/imgs/icon/more.png'></image>
+        </view>
+
+        <view class='item' data-type='hh' bindtap='saleTap' data-order_id="{{order_id}}">申请换货
+                <image src='/imgs/icon/more.png'></image>
+        </view>
+
+</view>

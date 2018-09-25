@@ -1,0 +1,66 @@
+@import "../../../common/common.wxss";
+@import "../record.wxss";
+
+.coupon_list .coupon_item {
+        border: 1px solid #f7f7f7;
+}
+
+.coupon_item {
+        width: 100% !important;
+}
+
+.coupon_list .coupon_item .info {
+        width: 400rpx;
+}
+
+.coupon_list .coupon_item .info .content {
+        width: 325rpx;
+}
+
+.goodsInfo .title {
+        font-size: 28rpx;
+        margin-top: 40rpx;
+        margin-bottom: 30rpx;
+}
+
+.goodsInfo .title image {
+        width: 33rpx;
+        height: 37rpx;
+        vertical-align: -6rpx;
+        margin-right: 5rpx;
+}
+.goodsInfo .content{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+}
+.goodsInfo .content image{
+        width: 148rpx;
+        height: 148rpx;
+        margin-right: 55rpx;
+}
+.goodsInfo .content .info{
+        width: 445rpx;
+        font-size: 26rpx;
+}
+.goodsInfo .content .info .name{
+        font-weight: bold;
+        color: #111;
+}
+.goodsInfo .content .info .number{
+        text-align: right;
+        color: #666;
+        font-size: 24rpx;
+        margin: 15rpx 0;
+}
+.goodsInfo .content .info .price{
+        color: #ff5722;
+        margin-top: 10rpx;
+}
+.goodsInfo  .address{
+        background: #f5f5f5;
+        border-radius: 10rpx;
+        border: 1px solid #d9d9d9;
+        padding: 30rpx;
+        line-height: 45rpx;
+}

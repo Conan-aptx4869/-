@@ -1,0 +1,8 @@
+<template name="sort">
+        <view class='sort_item {{sortId==index?"current":""}}' bindtap='sortTap' data-id="{{index}}">
+                {{item}}
+        </view>
+</template>
+
+<!--弹窗-->
+

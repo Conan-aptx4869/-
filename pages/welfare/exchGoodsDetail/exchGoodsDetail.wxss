@@ -1,0 +1,69 @@
+@import "../../common/common.wxss";
+@import "../../../wxParse/wxParse";
+swiper{
+        width: 100%;
+}
+swiper .slide-image {
+        width: 100%;
+}
+.exch_info {
+        background: #fff;
+        margin-bottom: 20rpx;
+}
+
+.exch_info .goods_name {
+        padding: 25rpx 90rpx 25rpx 20rpx;
+        font-size: 32rpx;
+        color: #111;
+}
+.exch_info .num{
+        text-align: right;
+        color: #111;
+        margin: 20rpx 30rpx 12rpx 0;
+}
+.exch_info .price{
+        height: 80rpx;
+        line-height: 80rpx;
+        padding: 0 20rpx;
+        color: #ff5722;
+        border-top: 1px solid #ccc;
+        overflow: hidden;
+}
+
+.goods_detail {
+        background: white;
+}
+.goods_detail .title{
+        font-size: 30rpx;
+        font-weight: bold;
+        height: 90rpx;
+        line-height: 90rpx;
+        padding-left: 20rpx;
+
+}
+
+.goods_detail  .text{
+        padding: 20rpx;
+}
+
+.exchange{
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        height: 90rpx;
+        line-height: 90rpx;
+        text-align: center;
+        color: #fff;
+        font-size: 32rpx;
+}
+.yes{
+        background: #ff5722;
+}
+.no{
+        background: #666666;
+}
+.look_type{
+        font-size: 22rpx;
+        color: #111;
+        text-align: center;
+}

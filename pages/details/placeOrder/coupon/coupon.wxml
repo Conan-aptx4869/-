@@ -1,0 +1,22 @@
+<view class='rule' bindtap='ruleTap'>使用规则</view>
+<view class='coupon_list '>
+        <view class='coupon_item ava' wx:for="{{coupons}}" data-id="{{item.m_cpn_id}}" data-status='{{item.status}}' data-m_cpn_id="{{item.m_cpn_id}}" bindtap='userTap'>
+                <view class='money'>
+                        <text class='symbol'>￥</text>
+                        <text class='num'>{{item.face_value}}</text>
+                        <view class='condition'>{{item.use_condition}}</view>
+                </view>
+                <view class='info'>
+                        <text class='icon'>优惠</text>
+                        <view class='content'>
+                                {{item.desc}}
+                                <view class='time'>
+                                        {{item.invalid_date}}-{{item.effective_date}}
+                                </view>
+                        </view>
+                </view>
+                <view class='explain'>
+                        {{item.can_use}}
+                </view>
+        </view>
+</view>

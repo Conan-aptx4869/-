@@ -1,0 +1,64 @@
+@import "../../common/common.wxss";
+.address_list label{
+    display: block;
+}
+.address_list  .item{
+        margin: 20rpx 0;
+        background: #fff;
+}
+.address_list .address{
+    padding: 25rpx 20rpx 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+.address_list .made{
+        width: 35%;
+}
+.address_list .address_info{
+    padding: 20rpx;
+}
+.address_list  .opera {
+    height: 80rpx;
+    line-height: 80rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 20rpx;
+    border-top:1px solid #e0e0e0;
+}
+ .address_list  .opera radio{
+     vertical-align: 4rpx;
+} 
+.address_list .made{
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.address_list  image{
+    width: 25rpx;
+    height: 27rpx;
+    vertical-align:-1rpx;
+}
+
+.orange{
+        color: #ff5722;
+}
+
+.add_address{
+        width: 100%;
+        height: 90rpx;
+        line-height: 90rpx;
+        text-align: center;
+        position: fixed;
+        bottom: 0;
+        background: #fff;
+        border-top: 1px solid #f7f7f7;
+        font-size: 32rpx;
+        color: #ff5722;
+}
+.add_address text{
+        font-size: 24rpx;
+}

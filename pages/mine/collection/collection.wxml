@@ -1,0 +1,73 @@
+<import src='../../index/classicDetail/classicDetail'/>
+<template name="recon">
+        <view class='item' data-goodsId="{{item.goods_id}}" bindtap='details' data-activity="{{item.activity}}">
+                <image src='{{item.cover}}' class='photo'></image>
+                <view class='name ellips'>{{item.goods_name}}</view>
+                <view class='price'>
+                        <text class='new_price'>￥{{item.price}}</text>
+                        <text class='old_price'>￥{{item.market_price}}</text>
+                </view>
+                <view class='discount'>折扣卡价  <text>￥{{item.discount_card_price}}</text></view>
+        </view>
+</template>
+
+ 
+<view class="admin_btn" bindtap="adminTap">
+        {{text==true?"管理":"取消管理"}}
+</view>
+<view class='goods_listx'>
+        <checkbox-group class="group" bindchange="checkboxChange">
+                <view class='item' data-cid="{{index}}" wx:for="{{collectList}}" data-id="{{item.id}}" wx:for-item="item" wx:for-index="index">
+                        <label class='{{showView==false?"hide":"show_inline"}}'>
+                                <checkbox hidden value="{{item.goods_name}}" checked="{{item.checked}}"></checkbox>
+                                <view class="label-1__icon" data-id="{{item.goods_id}}">
+                                        <view class="label-1__icon-checked">
+                                                <image src="{{item.checked?'/imgs/icon/checked.png':'/imgs/icon/un_checked.png'}}"></image>
+                                        </view>
+                                </view>
+                        </label>
+                        <view class='content' bindtap='detailTap' data-activity="{{item.activity}}" data-id="{{item.goods_id}}">
+                                <image class='photo' src='{{item.cover}}'></image>
+                                <view class='info'>
+                                        <view class='name'>
+                                                {{item.goods_name}}
+                                        </view>
+                                        <!-- <view class='content'>
+                                                容量：0.13kg
+                                        </view> -->
+                                        <view class='price'>
+                                                ￥{{item.price}}
+                                        </view>
+                                </view>
+                        </view>
+                </view>
+        </checkbox-group>
+
+        <view class='noBody' wx:if="{{noBody==true}}">没有更多数据了</view>
+
+</view>
+
+
+<template name="title">
+        <view class='section_title'>
+               ————— 为你推荐 —————
+                <text>FOR  YOU </text>
+        </view>
+</template>
+<template is="title" />
+
+
+<view class='goods_listy'>
+        <block wx:for="{{best}}">
+                <template is="hot_goods"  data="{{item:item,index:index}}" />
+        </block>
+</view>
+
+
+<view class='delete {{shows==false?"hide":"show"}}'>
+        <view class='select' bindtap='selectTap'>
+                <image src='{{select_icon}}'></image>
+                {{text2==true?"全选":"取消全选"}}
+        </view>
+        <view class='detele_btn' bindtap='deleteTap'>删除</view>
+</view>

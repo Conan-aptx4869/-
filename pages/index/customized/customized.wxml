@@ -1,0 +1,53 @@
+<form bindsubmit="formSubmit">
+        <view class="set_list">
+                <view class='item' bindtap='telNumberTap'>
+                        手机号
+                        <view>
+                                <input type='text' name="tel" placeholder='请输入手机号' />
+                        </view>
+                </view>
+                <view class='item'>
+                        位置选择
+                        <view>
+                                <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+                                        {{region[0]}} {{region[1]}} {{region[2]}}
+                                </picker>
+                                <image src='/imgs/icon/more.png' class='more'></image>
+                        </view>
+                </view>
+                <view class='item'>
+                        户型选择
+                        <view>
+                                <picker bindchange="household" value="{{house[index1].name}}" range="{{house}}" range-key="{{'name'}}">{{house[index1].name}}
+                                </picker>
+                                <image src='/imgs/icon/more.png' class='more'></image>
+                        </view>
+                </view>
+
+                <view class='item'>
+                        面积选择
+                        <view>
+                                <picker bindchange="acreage" value="{{index2}}" range="{{area}}" range-key="{{'name'}}">{{area[index2].name}}
+                                </picker>
+                                <image src='/imgs/icon/more.png' class='more'></image>
+                        </view>
+                </view>
+                <view class='item'>
+                        风格选择
+                        <view>
+                                <picker bindchange="styleChange" value="{{index3}}" range="{{style}}" range-key="{{'name'}}">{{style[index3].name}}
+                                </picker>
+                                <image src='/imgs/icon/more.png' class='more'></image>
+                        </view>
+                </view>
+                <view class='item'>
+                        价位选择
+                        <view>
+                                <picker bindchange="priceChange" value="{{index4}}" range="{{price}}" range-key="{{'name'}}">{{price[index4].name}}
+                                </picker>
+                                <image src='/imgs/icon/more.png' class='more'></image>
+                        </view>
+                </view>
+        </view>
+        <button formType="submit" data-house="{{house[index1].name}}" data-area="{{area[index2].name}}" data-style="{{style[index3].name}}" data-price="{{price[index4].name}}" data-province="{{region[0]}}" data-city="{{region[1]}}" data-areas=" {{region[2]}}">提交</button>
+</form>

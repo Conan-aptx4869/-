@@ -1,0 +1,31 @@
+<import src="../classicDetail/classicDetail" />
+<view class='head'>
+        <view class='banner'>
+                <image src='{{bannerUrl}}' mode="widthFix"></image>
+        </view>
+        <view class='sort'>
+                <view class='sort_item {{sortId==index?"current":""}}' bindtap='sortTap' wx:for="{{sort}}" data-id="{{index}}" data-sort="{{item.sort}}">
+                        {{item .name}}
+                </view>
+        </view>
+
+        <view class='both {{showView==false?"hide":"show"}}'>
+                <view class='both_sort'>
+                        <view data-sort="5" bindtap='sortTap'>价格升序</view>
+                        <view data-sort="6" bindtap='sortTap'>价格降序</view>
+                </view>
+        </view>
+
+</view>
+
+<view class='goods_listy'>
+        <block wx:for="{{goods}}">
+                <template is="hot_goods" data="{{item:item,index:index}}" />
+        </block>
+</view>
+
+<view class='noBody' wx:if="{{noBody==true}}">已到页面底部，没有更多数据了</view>
+
+<!--遮罩  -->
+<view class='mask {{showView==false?"hide":"show"}}' bindtap='maskView'></view>
+<!--遮罩  -->

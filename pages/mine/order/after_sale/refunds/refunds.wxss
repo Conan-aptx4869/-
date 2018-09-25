@@ -1,0 +1,121 @@
+@import "../../../../common/common.wxss";
+@import "../after_sale.wxss";
+
+.rePrice {
+        height: 65rpx;
+        margin-top: 20rpx;
+        border-bottom: 1px solid #ccc;
+        padding: 0 30rpx;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        background: #fff;
+}
+
+.rePrice text {
+        color: #fe5722;
+}
+
+form {
+        display: block;
+        background: #fff;
+        padding: 20rpx 30rpx;
+}
+
+form .title {
+        margin-bottom: 20rpx;
+        color: #575757;
+}
+
+form .radio label {
+        display: inline-block;
+        width: 50%;
+        vertical-align: top;
+        margin-bottom: 40rpx;
+}
+
+form .input {
+        width: 690rpx;
+        height: 90rpx;
+        background: #efefef;
+        border-radius: 12rpx;
+        padding-left: 26rpx;
+        margin: 20rpx 0;
+}
+.addIcon {
+        position: relative;
+        width: 65rpx;
+        height: 55rpx;
+        margin-right: 15rpx;
+}
+.upLoadPic {
+        padding: 40rpx 50rpx;
+        width: 690rpx;
+        background: #efefef;
+        border-radius: 12rpx;
+}
+
+.upLoadPic .content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+}
+
+.upLoadPic .text {
+        margin-top: 30rpx;
+        color: #404040;
+}
+
+.upLoadPic .subPic {
+        width: 63rpx;
+        height: 62rpx;
+}
+
+.gallery {
+        width: 630rpx;
+        margin: 0 auto;
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+}
+
+/*每张图片所占容器*/
+
+.gallery .item {
+        margin: 0 10rpx 15rpx 10rpx;
+        position: relative;
+}
+
+.gallery .item image {
+        width: 150rpx;
+}
+
+/*add按钮*/
+
+.addIcon {
+        position: relative;
+        width: 65rpx;
+        height: 55rpx;
+        margin-right: 15rpx;
+}
+
+/*删除按钮*/
+
+.delete {
+        position: absolute;
+        right: 0;
+        top: 0;
+        background: #fff;
+        opacity: 1;
+        height: 36rpx;
+        line-height: 36rpx;
+        font-size: 40rpx;
+        font-weight: 700;
+}
+form  button {
+        background: #fe5722;
+        color: #fff;
+        width: 625rpx;
+        margin-top: 90rpx;
+}

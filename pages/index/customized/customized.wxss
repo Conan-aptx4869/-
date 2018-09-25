@@ -1,0 +1,30 @@
+@import "../../common/common.wxss";
+@import "../../mine/setUp/setUp.wxss";
+
+form button {
+        width: 630rpx;
+        height: 90rpx;
+        background: #ff5722;
+        border-radius: 12rpx;
+        color: #fff;
+        margin-top: 90rpx;
+}
+
+form .item {
+        padding: 0 20rpx !important;
+        display: block;
+        height: 85rpx;
+}
+
+form .item input {
+        width: 580rpx;
+        height: 85rpx;
+}
+
+form .item  picker {
+        display: inline-block;
+        width: 577rpx;
+        height: 85rpx;
+        line-height: 85rpx;
+        text-indent: 10rpx;
+}

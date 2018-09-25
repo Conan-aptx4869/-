@@ -1,0 +1,33 @@
+<view class="guessing_graph">
+        <image src='{{pictures}}' mode="widthFix"></image>
+</view>
+
+<view class='container {{showView==true?"":"hide"}}'>
+        <form class='guess_form' bindsubmit="formSubmit">
+                <view class='title'>
+                        {{name}}
+                        <text bindtap='ruleTap'>活动规则</text>
+                </view>
+                <input type='text' name="answer" placeholder='{{prompt}}' />
+                <button formType="submit" data-proId="{{pro_id}}">确认</button>
+        </form>
+
+
+        <view class='answer_record'>
+                <view class='title' wx:if="{{list.length>0}}">猜题记录</view>
+                <view class='item' wx:for="{{list}}" data-aId="{{item.a_id}}" bindtap='taskDetailTap'>
+                        {{item.periods}} *** {{item.msg}}
+                </view>
+        </view>
+</view>
+
+
+
+<view class='guess_form {{showView==true?"hide":"show"}}' >
+        <view class='title'>
+                您的回答: {{answer}}
+                <text bindtap='ruleTap'>活动规则</text>
+        </view>
+        <view class='subtitle'>{{msg_ans}}</view>
+        <view class='type_btn' bindtap='homrPageTap'>{{msg_button}}</view>
+</view>

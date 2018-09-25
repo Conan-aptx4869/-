@@ -1,0 +1,14 @@
+@import "../../../common/common.wxss";
+@import "../../../../wxParse/wxParse.wxss";
+.banner image{
+        width: 100%;
+}
+.title{
+        margin: 50rpx auto;
+        text-align: center;
+        font-size: 32rpx
+}
+.text{
+        padding: 20rpx;
+        font-size: 25rpx;
+}

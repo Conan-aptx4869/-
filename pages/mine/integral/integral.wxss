@@ -1,0 +1,2 @@
+@import"../../common/common.wxss";
+@import"../myBalance/myBalance.wxss";

@@ -1,0 +1,75 @@
+@import "../../common/common.wxss";
+.search {
+        display: block;
+        width: 87%;
+        height: 60rpx;
+        margin: 20rpx auto;
+        background: #fff;
+        border-radius: 12rpx;
+}
+
+.search input {
+        width: 590rpx;
+        height: 100%;
+        display: inline-block;
+        font-size: 22rpx;
+}
+
+.search button {
+        width: 50rpx;
+        height: 60rpx;
+        display: inline-block;
+        position: relative;
+        background: none;
+        vertical-align: top;
+}
+
+.search button image {
+        width: 38rpx;
+        height: 38rpx;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        margin: auto;
+}
+
+.state_nav {
+        display: flex;
+        background: #fff;
+        flex-direction: row;
+        justify-content: space-around;
+        margin-bottom: 30rpx;
+}
+
+.state_nav .item {
+        height: 90rpx;
+        line-height: 90rpx;
+}
+.state_nav .selected{
+        border-bottom: 2px solid #ff5722;
+}
+
+.state_list .item {
+        color: #666;
+        margin-bottom: 20rpx;
+        background: #fff;
+        overflow: hidden;
+        padding-bottom: 20rpx;
+
+}
+.goods_info{
+        display: block;
+        margin-bottom: 20rpx;
+}
+.state_list .item .goods_info .content{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+}
+.state_btn{
+        float: right ;
+    
+}
+

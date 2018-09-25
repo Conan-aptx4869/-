@@ -1,0 +1,92 @@
+@import "../../common/common.wxss";
+@import "../../welfare/exchGoodsDetail/confirm/confirm.wxss";
+
+.discount_type .title {
+        height: 65rpx;
+        line-height: 65rpx;
+        color: #999;
+        padding: 0 30rpx;
+        font-size: 28rpx;
+} 
+
+.discount_type .radio {
+        display: block;
+        height: 85rpx;
+        line-height: 85rpx;
+        border-bottom: 1px solid #ccc;
+        padding: 0 10rpx 0 30rpx;
+        background: #fff;
+}
+
+.discount_type .radio radio {
+        float: right;
+        transform: scale(0.6);
+}
+
+.discount_type .radio:last-child {
+        border: none;
+}
+
+
+.info_list{
+        background: #fff;
+        margin-top: 20rpx;
+}
+.info_list .item{
+        height: 85rpx;
+        line-height: 85rpx;
+        border-bottom: 1px solid #ccc;
+        font-size: 28rpx;
+        padding: 0 30rpx;
+        overflow-y: hidden;
+}
+.info_list .item:last-child{
+        border: none;
+}
+.info_list .item .value{
+        float: right;
+        color: #ff5622;
+}
+.message {
+        font-size: 28rpx;
+        margin-top: 40rpx;
+        margin-bottom: 30rpx;
+        background: #fff;
+        padding: 30rpx;
+}
+
+.message  image {
+        width: 33rpx;
+        height: 37rpx;
+        vertical-align: -6rpx;
+        margin-right: 5rpx;
+}
+.message textarea{
+        width: 685rpx;
+        display: block;
+        padding: 30rpx;
+        background: #f5f5f5;
+        border: 1px solid #ccc;
+        border-radius: 12rpx;
+        margin-top: 20rpx;
+        height: 250rpx;
+}
+button{
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background: #ff5622;
+        color: #fff;
+        text-align: center;
+        border-radius: 0;
+        z-index: 10;
+}
+.goods_attr{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 15rpx 0;
+}
+.goodsInfo .content .info .number{
+        margin: 0 ;
+}

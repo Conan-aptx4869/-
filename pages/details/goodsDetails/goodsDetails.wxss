@@ -1,0 +1,244 @@
+@import "../../common/common.wxss";
+@import "/wxParse/wxParse.wxss";
+
+swiper  image {
+        width: 100%;
+}
+
+.goods_name {
+        background: #fff;
+        border-bottom: 1px solid #ccc;
+        padding: 25rpx;
+        font-size: 32rpx;
+        font-weight: bold;
+}
+
+.goods_name  .surplus {
+        text-align: right;
+        font-size: 24rpx;
+        color: #999;
+        font-weight: normal;
+}
+
+.price {
+        padding: 20rpx;
+        background: #fff;
+        margin-bottom: 20rpx;
+        font-size: 32rpx;
+        font-weight: bold;
+}
+
+.price  .new_price text {
+        font-size: 24rpx;
+        color: #999;
+        text-decoration: line-through;
+        font-weight: normal;
+}
+
+.price .discount {
+        color: #fe5722;
+        font-size: 28rpx;
+        font-weight: normal;
+}
+
+.good_info {
+        padding: 20rpx;
+        background: #fff;
+}
+
+.selected text {
+        margin-right: 10rpx;
+}
+
+.section {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 30rpx 0;
+        align-items: center;
+        font-size: 26rpx;
+}
+
+.section .lable {
+        width: 590rpx;
+}
+
+.section .lable .item {
+        display: inline-block;
+        padding: 10rpx 25rpx;
+        border-radius: 10rpx;
+        margin: 0 30rpx 10rpx 0;
+        border: 1px solid #ccc;
+}
+
+.section .lable .item.current {
+        background: #fe5722;
+        color: #fff;
+        border-color: #fe5722;
+}
+
+.section .title {
+        font-size: 24rpx;
+        width: 120rpx;
+        color: #b7b7b7;
+}
+
+.section .num {
+        width: 200rpx;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+}
+
+.section .num input {
+        width: 70rpx;
+        height: 53rpx;
+        text-align: center;
+        background: #efefef;
+        font-size: 24rpx;
+}
+
+.section .num text {
+        display: inline-block;
+        width: 53rpx;
+        height: 53rpx;
+        line-height: 53rpx;
+        text-align: center;
+        background: #efefef;
+}
+
+.address {
+        margin: 20rpx 0;
+        padding: 20rpx;
+        background: #fff;
+}
+
+.goods_details {
+        background: #fff;
+        padding: 25rpx 0;
+}
+
+.goods_details .title {
+        padding: 0 20rpx;
+}
+
+.goods_details .text {
+        font-size: 26rpx;
+        padding: 20 0rpx;
+}
+
+.goods_details .text image {
+        width: 100%;
+}
+
+.goods_comment .title {
+        padding: 25rpx 20rpx;
+        background: #fff;
+        font-weight: bold;
+}
+
+.goods_comment .title .all {
+        font-size: 25rpx;
+        color: #959595;
+        float: right;
+}
+
+.goods_comment .more {
+        width: 11rpx;
+        height: 25rpx;
+        vertical-align: -1rpx;
+}
+
+.footer_bar {
+        width: 100%;
+        height: 90rpx;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        position: fixed;
+        bottom: 0;
+        z-index: 5;
+}
+
+.footer_bar .made1 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        width: 34%;
+        background: #fff;
+        font-size: 24rpx;
+}
+
+.footer_bar .made1 view {
+        text-align: center;
+        position: relative;
+}
+
+.footer_bar .made1 view .num {
+        background: #fe0000;
+        display: inline-block;
+        font-size: 16rpx;
+        text-align: center;
+        width: 25rpx;
+        height: 25rpx;
+        line-height: 25rpx;
+        border-radius: 50%;
+        color: #fff;
+        position: absolute;
+        top: 0;
+        right: 0;
+}
+
+.footer_bar .made1  image {
+        width: 37rpx;
+        height: 37rpx;
+}
+
+.footer_bar .made1  .t {
+        display: block;
+}
+.footer_bar .made1 button{
+        line-height:33rpx;
+        padding: 0;
+        font-size: 24rpx;
+
+}
+.footer_bar .made2 {
+        width: 66%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+}
+
+.footer_bar .made2 view {
+        height: 90rpx;
+        width: 50%;
+        text-align: center;
+        line-height: 90rpx;
+        font-size: 30rpx;
+        font-weight: bold;
+        color: #fff;
+}
+
+.footer_bar .made2  .push_car {
+        background: #666;
+}
+
+.footer_bar .made2  .buy {
+        background: #fe5722;
+}
+
+#service{
+        position: absolute;
+        top:30rpx;
+        right: 30rpx;
+        background-color:none;
+        padding: 10rpx;
+        border-radius:8rpx;
+        line-height:  0;
+}
+#service .icon{
+        width:50rpx;
+        color: none;
+}

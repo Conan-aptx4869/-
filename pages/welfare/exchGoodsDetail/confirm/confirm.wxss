@@ -1,0 +1,72 @@
+@import "../../../common/common.wxss";
+@import "../exchGoodsDetail.wxss";
+.receipt_info{
+        padding: 40rpx;
+        background: #fff;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin: 20rpx 0;
+        line-height: 60rpx;
+        color: #333;
+}
+.receipt_info .name{
+        font-size: 30rpx;
+}
+.receipt_info .more{
+        width: 11rpx;
+        height: 20rpx;
+}
+.receipt_info .address_icon{
+        width: 48rpx;
+        height: 48rpx;
+}
+.receipt_info .content{
+        width: 560rpx;
+}
+.goodsInfo {
+        padding: 0 40rpx 30rpx;
+        background: #fff;
+}
+.goodsInfo .title {
+        font-size: 28rpx;
+        margin: 20rpx 0;
+}
+
+.goodsInfo .title image {
+        width: 33rpx;
+        height: 37rpx;
+        vertical-align: -6rpx;
+        margin-right: 5rpx;
+}
+.goodsInfo .content{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 10rpx;
+}
+.goodsInfo .content image{
+        width: 148rpx;
+        height: 148rpx;
+        margin-right: 55rpx;
+}
+.goodsInfo .content .info{
+        width: 445rpx;
+        font-size: 26rpx;
+}
+.goodsInfo .content .info .name{
+        font-weight: bold;
+        color: #111;
+}
+.goodsInfo .content .info .number{
+        text-align: right;
+        color: #666;
+        font-size: 24rpx;
+        margin: 15rpx 0;
+        
+}
+.goodsInfo .content .info .price{
+        color: #ff5722;
+        margin-top: 10rpx;
+}

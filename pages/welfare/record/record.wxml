@@ -1,0 +1,10 @@
+<view class="record_list ">
+        <view class='item' bindtap='changeTap' wx:for="{{list}}" data-orderId="{{item.order_id}}" data-type="{{item.goods_type}}">
+                <view class='name'>{{item.goods_name}}
+                        <text>{{item.price}}</text>
+                </view>
+                <view class='date'>{{item.pay_time}}
+                </view>
+        </view>
+</view>
+<view class='noBody' wx:if="{{noBody==true}}">已到页面底部，没有更多数据了</view>

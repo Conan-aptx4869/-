@@ -1,0 +1,52 @@
+<form bindsubmit="formSubmit" bindreset="formReset">
+        <view class='item'>
+                <view class='title'>收货人</view>
+                <input type='text' name="name" placeholder='姓名'  value='{{contacts}}'/>
+        </view>
+        <view class='item'>
+                <view class='title'>联系方式</view>
+                <input type='text' name="tel" placeholder='手机号码' value='{{mobile}}'/>
+        </view>
+        <view class='item'>
+                <view class='title'>所在地区</view>
+                <input type='text' placeholder="选择" value="{{province}} {{city}} {{county}}" focus="{{focus}}" bindtap="open" name='input7' disabled='disabled'/>
+        </view>
+
+
+        <view class='item'>
+                <view class='title'>详细地址</view>
+                <input type='text' name="address" placeholder='详细地址需填写楼栋楼层或房间号信息' value='{{address}}' />
+        </view>
+        <view class='item'>
+                <view class='title' >地址标签</view>
+                <view class='label'>
+                        <text wx:for="{{label}}" bindtap='addrLabelSelect' class='{{selectId==index?"selected":""}} {{address_tag==item?"selected":""}}' data-text="{{item}}"  data-cid="{{index}}">{{item}}</text>           
+                </view>
+        </view>
+        <button formType="submit" data-province_id="{{province_id}}" data-city_id="{{city_id}}" data-area_id="{{county_id}}"> 确认</button>
+</form>
+
+
+
+
+
+
+<!--省市区联动弹窗  -->
+<view wx:if="{{condition}}" class="citypicker">
+        <picker-view indicator-style="height: 40px;" value="{{value}}" bindchange="bindChange" class="citybody">
+                <view class="cityheader">
+                        <view bindtap="open" class="city-cancel">取消</view>
+                        <view bindtap="open" class="city-true">确定</view>
+                </view>
+                <picker-view-column>
+                        <view wx:for="{{provinces}}" wx:key="item" style="line-height: 40px;padding-left:10px;">{{item.region_name}}</view>
+                </picker-view-column>
+                <picker-view-column>
+                        <view wx:for="{{citys}}" wx:key="item" style="line-height: 40px;padding-left:10px;">{{item.region_name}}</view>
+                </picker-view-column>
+                <picker-view-column>
+                        <view wx:for="{{countys}}" wx:key="item" style="line-height: 40px;padding-left:10px;">{{item.region_name}}</view>
+                </picker-view-column>
+        </picker-view>
+</view>
+<!--省市区联动弹窗  -->

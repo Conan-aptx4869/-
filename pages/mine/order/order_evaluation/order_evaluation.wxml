@@ -1,0 +1,47 @@
+<form bindsubmit="bindFormSubmits">
+        <view class="evaGoodsInfo box">
+                <image src='{{cover}}'></image>
+                <view class='goodsName'>
+                        <view>{{goods_name}}</view>
+                        <view>{{goods_attr_desc}}</view>
+                </view>
+        </view>
+
+        <view class='grade box'>
+                <image src='/imgs/icon/g.png' class='icon'></image>
+                商品评级
+                <view class='start'>
+
+                        <block wx:for="{{one_2}}" wx:key="index">
+                                <image catchtap='in_xin' id='{{index+1}}' data-in='use_sc2' src='/imgs/icon/star_s.png'></image>
+                        </block>
+                        <block wx:for="{{two_2}}" wx:key="index">
+                                <image catchtap='in_xin' id='{{index+1}}' data-in='use_sc' src='/imgs/icon/star.png'></image>
+                        </block>
+                </view>
+        </view>
+
+        <textarea class="box" placeholder="请在此处写下您对商品的评价……" name="textarea" />
+    
+
+        <view class='upLoadPic box'>
+                <view class='content'>
+                        <image class='addIcon' src='/imgs/icon/pic.png' bindtap="chooseImage" data-pid="{{idx}}"></image>
+                        <view class="gallery">
+                                <view class="item" wx:for="{{images}}" wx:key="">
+                                        <image src="{{item}}" data-src="{{item}}" bindtap="previewImage" mode="widthFix" />
+                                        <view class="delete" bindtap="delete" data-index="{{index}}">×</view>
+                                </view>
+                        </view>
+                </view>
+
+                <view class='text'>添加图片（最多可上传4张图片哦）</view>
+        </view>
+
+           <button form-type="submit" data-images="{{images}}" data-star="{{one_2}}" data-goods_id="{{goods_id}}" data-order_id="{{order_id}}">  提交 </button>
+</form>
+
+
+ 
+
+

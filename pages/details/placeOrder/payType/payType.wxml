@@ -1,0 +1,22 @@
+<view class="price">应付金额
+        <text>￥{{pay_amounts}}</text>
+</view>
+
+<view class='type'>
+        <view class='title item'>支付方式</view>
+        <radio-group class="radio-group" bindchange="radioChange">
+                <label class="radio item">
+                        <image src='/imgs/icon/icon3.png'></image>
+                        余额支付
+                        <radio value="3" checked="" color='#ff5622' />
+                </label>
+                <label class="radio item">
+                        <image src='/imgs/icon/wechat.png'></image>
+                        微信支付
+                        <radio value="2" checked="" color='#ff5622' />
+                </label>
+
+        </radio-group>
+</view>
+
+<view class='pay' bindtap='payTap'>立即支付</view>

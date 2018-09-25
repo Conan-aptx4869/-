@@ -1,0 +1,95 @@
+<view class='container'>
+        <!-- <view class="banner" style='background:url(../../imgs/bg/bg1.png);background-size:100% 100%;'> -->
+        <view class='banner'>
+                <image src='{{avatarUrl}}' class='avatar'></image>
+                <view class='info'>
+                        <view class='name'>{{name==""?"你还没有起名字呢":name}}</view>
+                        <view class='growth'>
+                                <text>我的余额：{{balance}} 元</text>
+                                <text>成长值：{{growth_value}} </text>
+                        </view>
+                </view>
+                <view class='admin' bindtap='setUpTap'>
+                        <image src='/imgs/icon/admini.png'></image>
+                        账号管理
+                </view>
+        </view> 
+
+        <view class='nav_list'>
+                <view class='item' bindtap='showDialogBtn'>
+                        <image src='/imgs/icon/icon1.png'></image>
+                        每日签到
+                </view>
+                <view class='item' bindtap='taskTap'>
+                        <image src='/imgs/icon/icon2.png'></image>
+                        会员任务
+                </view>
+                <view class='item' bindtap='balanceTap'>
+                        <image src='/imgs/icon/icon3.png'></image>
+                        余额
+                </view>
+                <view class='item' bindtap='integralTap'>
+                        <image src='/imgs/icon/icon4.png'></image>
+                        积分
+                </view>
+                <view class='item' bindtap='collecTap'>
+                        <image src='/imgs/icon/icon5.png'></image>
+                        收藏
+                </view>
+                <view class='item' bindtap='addresTap'>
+                        <image src='/imgs/icon/icon6.png'></image>
+                        收货地址
+                </view>
+                <view class='item' bindtap='orderTap'>
+                        <image src='/imgs/icon/icon7.png'></image>
+                        订单
+                </view>
+                <view class='item' bindtap='couponTap'>
+                        <image src='/imgs/icon/icon8.png'></image>
+                        优惠券
+                </view>
+        </view>
+
+</view>
+
+<view class='adv'>
+        <image src='{{item.abs_url}}' wx:for="{{advert}}" data-adId="{{item.ad_id}}" data-param="{{item.param}}" data-targetRule="{{item.target_rule}}" mode='widthFix' bindtap='activityTap'></image>
+</view>
+
+<view class='opera_list'>
+        <view class='item' bindtap='helpTap'>
+                <image src='/imgs/icon/o1.png' class='icon'></image>
+                帮助
+                <image src='/imgs/icon/more.png' class='more'></image>
+        </view>
+        <view class='item' bindtap='feedbackTap'>
+                <image src='/imgs/icon/o2.png' class='icon'></image>
+                反馈
+                <image src='/imgs/icon/more.png' class='more'></image>
+        </view>
+        <view class='item' bindtap='setUpTap'>
+                <image src='/imgs/icon/o3.png' class='icon'></image>
+                设置
+                <image src='/imgs/icon/more.png' class='more'></image>
+        </view>
+</view>
+
+
+
+
+
+<!--签到弹窗  -->
+
+<view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+<view class="modal-dialog" wx:if="{{showModal}}">
+        <view class="modal-content">
+                <image class='photo' src="{{item.abs_url}}" wx:for="{{advertz}}" data-adId="{{item.ad_id}}" data-targetRule="{{item.target_rule}}" data-param="{{item.param}}"></image>
+                <view class='text2'>{{message}}</view>
+                   <view class='text3' wx:if="{{text3!=undefiend}}">获得 {{text3}} 积分</view>
+        </view>
+        <view class="modal-footer">
+                <view class="btn-confirm" bindtap="onConfirm" data-status="confirm">确定</view>
+        </view>
+</view>
+
+<!--签到弹窗  -->

@@ -1,0 +1,6 @@
+@import "../../../common/common.wxss";
+
+.saveForm input {
+        margin: 30rpx auto 90rpx;
+        width: 670rpx;
+}

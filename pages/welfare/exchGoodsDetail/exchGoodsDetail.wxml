@@ -1,0 +1,45 @@
+<import sec="../../../wxParse/wxParse.wxml" />
+<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-active-color="#fff" style="height:{{imgheights[current]}}rpx;">
+        <swiper-item wx:for="{{imgUrls}}">
+                <image src="{{item.abs_url}}" class="slide-image" mode="widthFix" bindload="imageLoad" data-imgId="{{item.id}}" />
+        </swiper-item>
+</swiper>
+
+<view class='exch_info'>
+        <view class='goods_name'>
+                {{goods_name}}
+        </view>
+        <view class='num'>
+                剩余： {{stock
+                <0? "无库存":stock}} </view>
+                        <view class='price'>{{price}}积分</view>
+        </view>
+        <view class='goods_detail'>
+                <view class='title'>商品详情</view>
+                <view class='text'>
+                        <template is="wxParse" data="{{wxParseData:content.nodes}}" />
+                </view>
+        </view>
+
+        <view class='exchange {{grade<=grade_num?"yes":"no"}}' bindtap='exchangeTap'>
+                {{grade
+                <=grade_num? "立即兑换":button_msg}} </view>
+
+
+
+                        <!--兑换成功弹窗  -->
+                        <view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+                        <view class="modal-dialog" wx:if="{{showModal}}">
+                                <view class="modal-content">
+                                        <image class='photo' src="{{item.abs_url}}" wx:for="{{advert}}" data-adId="{{item.ad_id}}" data-targetRule="{{item.target_rule}}" data-param="{{item.param}}"></image>
+                                        <view class='text2'>
+                                                兑换成功
+                                                <view class='look_type'>可在“我的优惠券”查看</view>
+                                        </view>
+
+                                </view>
+                                <view class="modal-footer">
+                                        <view class="btn-confirm" bindtap="onConfirm" data-status="confirm">确定</view>
+                                </view>
+                        </view>
+                        <!--兑换成功弹窗  -->

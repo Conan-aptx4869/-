@@ -1,0 +1,114 @@
+@import "../common/common.wxss";
+
+.container {
+        background: #fff;
+}
+
+.banner {
+        width: 100%;
+        height: 260rpx;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        box-shadow: 10rpx 10rpx 10rpx #acacac;
+        background: -webkit-linear-gradient(left top, #f39b31, #efb36e); /* Safari 5.1 - 6.0 */
+}
+
+.banner .avatar {
+        width: 110rpx;
+        height: 110rpx;
+        border-radius: 50%;
+}
+
+.banner  .info {
+        width: 390rpx;
+        color: #fff;
+}
+
+.banner .info  .growth {
+        font-size: 22rpx;
+        padding: 10rpx 20rpx;
+        background: rgba(0, 0, 0, 0.5);
+        border-radius: 10rpx;
+}
+
+.banner .info  .growth text:first-child {
+        float: right;
+}
+
+.banner  .info .name {
+        font-size: 26rpx;
+        margin-bottom: 25rpx;
+        font-weight: bold;
+}
+
+.banner .admin {
+        color: #fff;
+}
+
+.banner .admin>image {
+        width: 38rpx;
+        height: 38rpx;
+        vertical-align: -6rpx;
+}
+
+.nav_list {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        margin: 30rpx auto 15rpx;
+}
+
+.nav_list .item {
+        width: 170rpx;
+        font-size: 24rpx;
+        margin: 20rpx auto 15rpx;
+        text-align: center;
+}
+
+.nav_list .item image {
+        width: 60rpx;
+        height: 60rpx;
+        display: block;
+        margin: 0 auto 15rpx;
+}
+
+.adv {
+        padding: 30rpx 0;
+}
+
+.adv>image {
+        height: 175rpx;
+        width: 100%;
+}
+
+.opera_list {
+        background: #fff;
+}
+
+.opera_list>.item {
+        height: 85rpx;
+        line-height: 85rpx;
+        border-bottom: 1px solid #ccc;
+        padding: 0 20rpx;
+        position: relative;
+}
+
+.opera_list>.item  .icon {
+        width: 26rpx;
+        height: 26rpx;
+        vertical-align: -1px;
+        margin-right: 10rpx;
+}
+
+.opera_list>.item  .more {
+        width: 13rpx;
+        height: 25rpx;
+        float: right;
+        position: absolute;
+        bottom: 0;
+        top: 0;
+        right: 20rpx;
+        margin: auto;
+}

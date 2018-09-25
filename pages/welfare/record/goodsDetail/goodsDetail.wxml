@@ -1,0 +1,33 @@
+<view class="card_list">
+        <view class='item'>
+                <view class='name'>积分兑换-卡券
+                        <text>-500</text>
+                </view>
+                <view class='date'>2018.05.01
+                </view>
+                <view class='goods'>
+                        <view class='title'>
+                                <image src='/imgs/icon/buy.png'></image>
+                                兑换商品
+                        </view>
+                        <view class='info'>
+                                <image class='photo' src='/imgs/test.png'></image>
+                                <view class='right'>
+                                        <view class='name'>多功能插座</view>
+                                        <view class='num'> x 1</view>
+                                        <view class='price'>200 积分</view>
+                                </view>
+                        </view>
+                        <view class='title'>
+                                <image src='/imgs/icon/address.png'></image>
+                                配送地址
+                        </view>
+                        <view class='address_content'>
+                                湖北省武汉市洪山区光谷创意大厦A座 1105
+                        </view>
+                </view>
+        </view>
+
+
+
+</view>

@@ -1,0 +1,22 @@
+<view class='balanceNum'>
+        <view class='total'>
+                余额
+                <text>￥ {{blance}}</text>
+        </view>
+
+        <view class='number'>
+                ———————— 余额明细 ————————
+        </view>
+</view>
+
+<view class='balance_list'>
+        <view class='item' wx:for="{{list}}">
+                <view>
+                        {{item.trend_name}}
+                        <text>{{item.create_time}}</text>
+                </view>
+                <view class='money'>{{item.symbol_name}}￥ {{item.amounts}}</view>
+        </view>
+        <view class='noBody'wx:if="{{noBody==true}}">已到页面底部，没有更多数据了</view>
+</view>
+

@@ -1,0 +1,49 @@
+@import "../../../common/common.wxss";
+page{
+        height: 100%;
+}
+.price {
+        height: 90rpx;
+        padding: 0 30rpx;
+        line-height: 90rpx;
+        background: #fff;
+        margin: 10rpx 0;
+}
+
+.price text {
+        color: #ff5622;
+}
+
+.type .item {
+        height: 80rpx;
+        padding: 0 30rpx;
+        line-height: 80rpx;
+        background: #fff;
+        border-bottom: 1px solid #ccc;
+        display: block;
+}
+.type .item image{
+        width: 40rpx;
+        height: 40rpx;
+        vertical-align: -8rpx;
+        margin-right: 5rpx;
+}
+.type .item radio{
+        float: right;
+        transform: scale(0.7);
+}
+.type .item:last-child{
+        border-bottom: none;
+}
+.pay{
+        height: 90rpx;
+        width: 100%;
+        position: fixed;
+        text-align: center;
+        line-height: 90rpx;
+        background: #ff5622;
+        color: #fff;
+        bottom: 0;
+        left: 0;
+        font-size: 32rpx;
+}

@@ -1,0 +1,9 @@
+<import src="../../../../wxParse/wxParse"/>
+<view class="banner">
+        <image src='{{cover}}' mode="widthFix"></image>
+</view>
+
+<view class='title'>{{title}}</view>
+<view class='text'>
+        <template is="wxParse" data="{{wxParseData:content.nodes}}" />
+</view>

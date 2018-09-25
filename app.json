@@ -1,0 +1,86 @@
+{
+        "pages": [
+                "pages/index/index",
+                "pages/mine/order/order",
+                "pages/mine/myBalance/myBalance",
+                "pages/shop/shop",
+                "pages/mine/order/after_sale/refunds/refunds",
+                "pages/mine/order/after_sale/after_sale",
+                "pages/mine/order/order_evaluation/order_evaluation",
+                "pages/details/placeOrder/payType/payType",
+                "pages/details/placeOrder/coupon/coupon",
+                "pages/details/placeOrder/placeOrder",
+                "pages/details/placeOrder/disCard/disCard",
+                "pages/welfare/welfare",
+                "pages/mine/address/address",
+                "pages/mine/address/edit/edit",
+                "pages/mine/mine",
+                "pages/welfare/record/cardDetail/cardDetail",
+                "pages/welfare/exchGoodsDetail/exchGoodsDetail",
+                "pages/welfare/exchGoodsDetail/confirm/confirm",
+                "pages/details/goodsDetails/goodsDetails",
+                "pages/details/goodsDetails/allComment/allComment",
+                "pages/welfare/task/task",
+                "pages/welfare/task/taskRule/taskRule",
+                "pages/welfare/task/taskDetail/taskDetail",
+                "pages/welfare/record/goodsDetail/goodsDetail",
+                "pages/welfare/record/record",
+                "pages/welfare/record/converReco/converReco",
+                "pages/index/classicDetail/classicDetail",
+                "pages/index/customized/customized",
+                "pages/index/classicDetail/hotClassic/hotClassic",
+                "pages/index/popularActivity/popularActivity",
+                "pages/mine/integral/integral",
+                "pages/mine/coupon/coupon",
+                "pages/mine/coupon/rule/rule",
+                "pages/mine/setUp/saveTelNum/saveTelNum",
+                "pages/mine/setUp/saveTelNum/modifyTelNum/modifyTelNum",
+                "pages/mine/setUp/setUp",
+                "pages/mine/setUp/saveName/saveName",
+                "pages/mine/setUp/saveID/saveID",
+                "pages/mine/setUp/saveMail/saveMail",
+                "pages/mine/feedback/feedback",
+                "pages/mine/help/help",
+                "pages/mine/help/helpDetail/helpDetail",
+                "pages/mine/order/order_detail/order_detail",
+                "pages/mine/collection/collection"
+        ],
+        "window": {
+                "backgroundTextStyle": "light",
+                "navigationBarBackgroundColor": "#fff",
+                "navigationBarTextStyle": "black"
+        },
+        "tabBar": {
+                "color": "#000",
+                "borderStyle": "dadada",
+                "backgroundColor": "#fff",
+                "position": "bottom",
+                "selectedColor": "#ff5722",
+                "list": [
+                        {
+                                "pagePath": "pages/index/index",
+                                "text": "首页",
+                                "iconPath": "imgs/icon/home.png",
+                                "selectedIconPath": "imgs/icon/home_s.png"
+                        },
+                        {
+                                "pagePath": "pages/welfare/welfare",
+                                "text": "福利社",
+                                "iconPath": "imgs/icon/weflare.png",
+                                "selectedIconPath": "imgs/icon/weflare_s.png"
+                        },
+                        {
+                                "pagePath": "pages/shop/shop",
+                                "text": "购物车",
+                                "iconPath": "imgs/icon/shop.png",
+                                "selectedIconPath": "imgs/icon/shop_s.png"
+                        },
+                        {
+                                "pagePath": "pages/mine/mine",
+                                "text": "我的",
+                                "iconPath": "imgs/icon/mine.png",
+                                "selectedIconPath": "imgs/icon/mine_s.png"
+                        }
+                ]
+        }
+}

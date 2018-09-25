@@ -1,0 +1,58 @@
+<import src="../../mine/collection/collection" />
+<template name='hot_goods'>
+        <view class='item' data-id="{{item.goods_id}}" bindtap='detailTap' wx:for-index="index" wx:for-item="item" data-activity="{{item.activity}}">
+                <image src='/imgs/icon/uncollection.png' catchtap='fabTap' class='fab' data-id="{{item.goods_id}}" data-cid="{{index}}" wx:if="{{item.is_coll==item.isStar}}"></image>
+                <image src='/imgs/icon/collection.png' catchtap='fabTap' class='fab' data-id="{{item.goods_id}}" data-cid="{{index}}" wx:else></image>
+                <image src='{{item.cover}}' class='photo'></image>
+                <view class='name ellips'>{{item.goods_name}} </view>
+                <view class='price'>
+                        <text class='new_price'>￥{{item.price}}</text>
+                        <text class='old_price'>￥{{item.market_price}}</text>
+                </view>
+                <view class='discount'>折扣卡价 ￥{{item.discount_card_price}}</view>
+        </view>
+</template>
+
+
+<view class='head'>
+        <view class='classic_list'>
+                <view class='item' bindtap='seeAllTap'>
+                        <view class='see'>
+                                <text>查看全部</text> See All
+                        </view>
+                </view>
+                <block wx:for="{{list}}">
+                        <view class='item' data-id="{{item.id}}" data-parentId="{{item.parent_id}}" bindtap='classicDetailTap' data-name="{{item.name}}">
+                                <image src='{{item.icon}}'></image>
+                                {{item.name}}
+                        </view>
+                </block>
+        </view>
+
+        <view class='sort'>
+                <view class='sort_item {{sortId==index?"current":""}}' bindtap='sortTap' wx:for="{{sort}}" data-id="{{index}}" data-sort="{{item.sort}}">
+                        {{item .name}}
+                </view>
+
+        </view>
+
+        <view class='both {{showView==false?"hide":"show"}}'>
+                <view class='both_sort'>
+                        <view data-sort="5" bindtap='sortTap'>价格升序</view>
+                        <view data-sort="6" bindtap='sortTap'>价格降序</view>
+                </view>
+        </view>
+</view>
+
+
+
+<view class='goods_listy'>
+        <block wx:for="{{goods}}">
+                <template is="hot_goods" data="{{item:item,index:index}}" />
+        </block>
+</view>
+<view class='noBody' wx:if="{{noBody==true}}">已到页面底部，没有更多数据了</view>
+
+<!--遮罩  -->
+<view class='mask {{showView==false?"hide":"show"}}' bindtap='maskView'></view>
+<!--遮罩  -->

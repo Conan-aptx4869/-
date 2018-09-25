@@ -1,0 +1,56 @@
+<view class="admin_btn" bindtap="adminTap">
+        {{showView==true?"编辑":"删除"}}
+</view>
+ <view class='goods_listx'>
+        <checkbox-group class="group" bindchange="checkboxChange">
+                <view class="item" wx:for="{{shop_list}}">
+                        <label class='{{shows==false?"hide":"show_inline"}}'>
+                                <checkbox hidden value="{{item.cart_id}}" checked="{{item.checked}}"></checkbox>
+                                <view class="label-1__icon">
+                                        <view class='invalid' wx:if="{{item.status==null || item.status==0}}"> 失效</view>
+                                      
+                                        <view class="label-1__icon-checked">
+                                                <image src="{{item.checked?'/imgs/icon/checked.png':'/imgs/icon/un_checked.png'}}"></image>
+                                        </view>
+                                </view>
+                        </label>
+                         <view class='content'>
+                                <image class='photo' src='{{item.cover}}'></image>
+                                <view class='info'>
+                                        <view class='name'>
+                                                {{item.goods_name}}
+                                        </view>
+                                        <view class='content'>
+                                                {{item.goods_attr_desc}}
+                                        </view>
+                                        <view class='price'>
+                                                <view>￥{{item.price}}</view>
+                                                <view class='num' wx:if="{{item.status!=null && item.status!=0}}">
+                                                        <view class='symbol' bindtap='subTap' data-index="{{index}}">-</view>
+                                                        <view class='number'>{{item.number}}</view>
+                                                        <view class='symbol' bindtap='addTap' data-index="{{index}}">+</view>
+                                                </view>
+                                        </view>
+                                </view>
+                        </view> 
+                </view>
+        </checkbox-group>
+</view> 
+
+
+
+
+
+
+
+
+
+<view class='delete {{shows==false?"hide":"show"}}'>
+        <view class='select' bindtap='selectTap'>
+                <image src='{{select_icon}}'></image>
+                {{text2==true?"全选":"取消全选"}}
+        </view>
+        <view class='total_price {{showView==true?"hide":""}}'>合计: ￥{{total_price}}</view>
+        <view class='detele_btn' wx:if="{{showView==false}}" data-activity="{{activity}}" bindtap='settTap'>去结算</view>
+        <view class='detele_btn' wx:elif="{{showView==true}}" bindtap='deleteTap'>删除</view>
+</view>

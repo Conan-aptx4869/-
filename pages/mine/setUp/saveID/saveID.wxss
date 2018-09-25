@@ -1,0 +1,11 @@
+@import "../../../common/common.wxss";
+.careful{
+        font-size: 20rpx;
+        text-align: center;
+        color: #999;
+        margin-top: 15rpx;
+}
+.saveForm input {
+        margin: 30rpx auto 90rpx;
+        width: 670rpx;
+}

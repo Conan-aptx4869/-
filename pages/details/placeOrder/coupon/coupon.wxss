@@ -1,0 +1,7 @@
+@import "../../../common/common.wxss";
+.rule {
+        display: block;
+        color: #ff5722;
+        margin: 25rpx 20rpx 25rpx 0;
+        text-align: right;
+}

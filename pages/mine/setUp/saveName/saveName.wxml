@@ -1,0 +1,8 @@
+<template name='save'>
+        <form bindsubmit="bindFormSubmit" class="saveForm">
+                <input name="input" />
+                <button form-type="submit"> 保存 </button>
+        </form>
+</template>
+ 
+<template is='save'/>

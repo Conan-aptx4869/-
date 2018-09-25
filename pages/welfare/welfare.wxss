@@ -1,0 +1,219 @@
+@import "../common/common.wxss";
+
+page {
+        background: #fff;
+}
+
+.member_info {
+        height: 220rpx;
+        padding: 0 25rpx;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+}
+
+.member_info .avatar {
+        width: 100rpx;
+        height: 100rpx;
+        border-radius: 50%;
+}
+
+.member_info  .info {
+        width: 560rpx;
+}
+
+.member_info  .info .icon {
+        width: 30rpx;
+        border-radius: 50%;
+}
+
+.member_info  .info .name {
+        font-size: 30rpx;
+        font-weight: bold;
+        margin-bottom: 30rpx;
+}
+
+.member_info  .info .integral {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        font-size: 26rpx;
+}
+
+.column {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        height: 65rpx;
+        line-height: 65rpx;
+        border-top: 1px solid #f1f1f1;
+        border-bottom: 1px solid #f1f1f1;
+}
+
+.column view image {
+        width: 40rpx;
+        height: 40rpx;
+        vertical-align: -7rpx;
+}
+
+.column view {
+        width: 50%;
+        text-align: center;
+}
+
+.column view:first-child {
+        border-right: 1px solid #f1f1f1;
+}
+
+swiper {
+        width: 100%;
+        height: 390rpx;
+        margin: 30rpx auto;
+}
+
+swiper swiper-item {
+        width: 530rpx !important;
+}
+
+swiper swiper-item .item {
+        width: 500rpx;
+        margin: auto;
+        height: 340rpx;
+        box-shadow: 10rpx 10rpx 20rpx #d4d4d4;
+        position: relative;
+}
+
+swiper swiper-item .slide-image {
+        width: 100%;
+        display: block; 
+        height:100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+}
+
+swiper swiper-item  .info {
+        width: 100%;
+        margin: auto;
+        padding: 15rpx 30rpx;
+        font-size: 28rpx;
+        line-height: 35rpx;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 4;
+        background:rgba(0, 0, 0, 0);
+}
+
+swiper swiper-item  .info text {
+        color: #ff5722;
+        display: block;
+        font-size: 24rpx;
+}
+
+.wx-swiper-dots.wx-swiper-dots-horizontal {
+        position: absolute;
+        bottom: 0rpx;
+}
+
+.adv image {
+        width: 100%;
+}
+
+.inte {
+        margin-bottom: 60rpx;
+}
+
+.inte .title {
+        padding: 0 35rpx;
+}
+
+.inte .title .inte_num {
+        display: inline-block;
+        width: 50rpx;
+        height: 50rpx;
+        vertical-align: 26rpx;
+        margin-right: 15rpx;
+        background: #ff5722;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 50rpx;
+        color: #fff;
+}
+
+.inte .title .title_text {
+        font-size: 30rpx;
+        font-weight: bold;
+        display: inline-block;
+        margin-bottom: 45rpx;
+}
+
+.inte .title .title_text text {
+        color: #999;
+        font-size: 22rpx;
+        display: block;
+        margin-top: 10rpx;
+        font-weight: normal;
+}
+
+.inte .title .more {
+        float: right;
+        font-size: 24rpx;
+        color: #999;
+}
+
+.inte  .inte_list {
+        padding: 0 50rpx;
+        display: flex;
+        flex-flow: row wrap;
+}
+
+.inte .inte_list .item {
+        text-align: center;
+        margin-bottom: 30rpx;
+        margin-right: 55rpx;
+}
+
+.inte .inte_list .item:nth-child(3n) {
+        margin-right: 0;
+}
+
+.inte .inte_list .item image {
+        width: 180rpx;
+        height: 180rpx;
+}
+
+.inte  .inte_list .item {
+        line-height: 45rpx;
+}
+
+.inte  .inte_list .item .num {
+        color: #ff5722;
+        display: block;
+}
+
+.inte  .inte_list .item .btn {
+        display: inline-block;
+        width: 120rpx;
+        height: 35rpx;
+        font-size: 22rpx;
+        line-height: 35rpx;
+        background: #ff5722;
+        border-radius: 10rpx;
+        color: #fff;
+}
+
+.inte  .inte_list .item .un {
+        background: #bababa;
+}
+
+.more_record {
+        text-align: center;
+        color: #999;
+}
+
+.section_title {
+        border-bottom: 1px solid #ddd;
+        margin-bottom: 50rpx;
+}

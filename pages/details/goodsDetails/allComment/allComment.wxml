@@ -1,0 +1,10 @@
+<import src="../goodsDetails.wxml" />
+
+<view class='comment_list'>
+        <block wx:for="{{list}}">
+                <template is="comment_list" data="{{item}}" />
+        </block>
+
+        <view class='noBody' wx:if="{{noBody==true}}">已到页面底部，没有更多数据了</view>
+
+</view>

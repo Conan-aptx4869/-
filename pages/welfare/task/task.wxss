@@ -1,0 +1,73 @@
+@import "../../common/common.wxss";
+.guess_form {
+        display: block;
+        margin-top: 60rpx;
+        width: 100%;
+}
+
+.guessing_graph image {
+        width: 100%;
+}
+
+.guess_form .title {
+        text-align: center;
+        font-size: 34rpx;
+        margin-bottom: 30rpx;
+        position: relative;
+}
+
+.guess_form .title text {
+        font-size: 24rpx;
+        color: #666;
+        position: absolute;
+        right: 20rpx;
+}
+
+.guess_form input {
+        display: block;
+        width: 550rpx;
+        height: 70rpx;
+        margin:0  auto 90rpx;
+        border: 1px solid #ccc;
+        border-radius: 12rpx;
+        padding-left: 30rpx;
+}
+
+.guess_form button {
+        width: 550rpx;
+        height: 70rpx;
+        line-height: 70rpx;
+        border-radius: 12rpx;
+        background: #ff5722;
+        color: #fff;
+}
+.answer_record{
+        margin-top: 60rpx;
+}
+.answer_record .title{
+        text-align: center;
+        font-size: 30rpx;
+        margin: 60rpx  auto 25rpx;
+}
+.answer_record .item{
+        width: 450rpx;
+        margin: 0 auto 25rpx;
+}
+
+.subtitle{
+        color: #fe5722;
+        text-align: center;
+        margin: 30rpx auto 90rpx;
+        font-size: 30rpx;
+}
+.type_btn{
+        background: #fe5722;
+        color: #fff;
+        width: 550rpx;
+        height: 70rpx;
+        line-height: 70rpx;
+        border-radius: 12rpx;
+        text-align: center;
+        margin: auto;
+        font-size: 32rpx;
+}

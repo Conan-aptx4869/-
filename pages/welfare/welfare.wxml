@@ -1,0 +1,90 @@
+<view class="member_info">
+        <image src='{{avatarUrl}}' class='avatar'></image>
+        <view class='info'>
+                <view class='name'>{{name}}</view>
+                <view class='integral'>
+                        <view class='item'>
+                                <image class='icon' src='/imgs/icon/f1.png' mode='widthFix'></image>
+                                积分:{{integral}}
+                        </view>
+                        <view class='item'>
+                                <image class='icon' src='/imgs/icon/f2.png' mode='widthFix'></image>
+                                等级:{{grade}}
+                        </view>
+                        <view class='item'>
+                                <image class='icon' src='/imgs/icon/f3.png' mode='widthFix'></image>
+                                成长值:{{growth_value}}
+                        </view>
+                </view>
+        </view>
+</view>
+
+<view class='column'>
+        <view bindtap='recordTap'>
+                <image src='/imgs/icon/record.png'></image>
+                兑换记录
+        </view>
+        <view bindtap='taskTap'>
+                <image src='/imgs/icon/task.png'></image>
+                会员任务
+        </view>
+</view>
+
+<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-active-color="#ff5722"  circular='true' next-margin='85rpx' previous-margin='85rpx'>
+        <block wx:for="{{slide}}">
+                <swiper-item style='margin:0 20rpx;' >
+                        <view class='item' data-goodsId="{{item.goods_id}}" data-lockType="{{item.lock_type}}" data-grade="{{item.m_grade}}" bindtap='exchTap'>
+                                <image src="{{item.cover}}" class="slide-image" mode='aspectFill' />
+                                <view class='info'>
+                                        {{item.goods_name}}
+                                        <text>{{item.price}} 积分</text>
+                                </view>
+                        </view>
+                </swiper-item>
+        </block>
+</swiper>
+ 
+<view class='adv'>
+        <image src='{{item.abs_url}}' mode="widthFix" wx:for="{{advert}}" data-adId="{{item.ad_id}}" data-param='{{item.param}}' data-targetRule="{{item.target_rule}}"></image>
+</view>
+
+<view class='section_title'>
+        ————— 积分兑换 —————
+        <text>FOR YOU</text>
+</view>
+
+
+
+<template name='rank_list'>
+        <view class='inte' wx:for-item="item">
+                <view class='title'>
+                        <view class='inte_num'>{{item.grade_sign}}</view>
+                        <view class='title_text'>
+                                {{item.grade_name}}
+                                <text>{{item.growth_value}}</text>
+                        </view>
+                        <view class='more' bindtap='recoMoreTap' data-grade="{{item.m_grade}}" data-grade_num="{{grade_num}}" >更多推荐</view>
+                </view> 
+                <view class='inte_list'>
+                        <view class='item' bindtap='exchTap' wx:for="{{item.goods_list}}" wx:for-item="items" data-goodsId="{{items.goods_id}}" data-grade="{{items.m_grade}}">
+                                <image src='{{items.cover}}' class='photo'></image>
+                                <view class='name'>{{items.goods_name}}</view>
+                                <text class='num'>{{items.price}} 积分</text>
+                                <view class='btn' wx:if="{{items.lock_type==1}}">立即兑换</view>
+                                <view class='btn un' wx:else>未解锁</view>
+                        </view>
+                </view>
+        </view>
+</template>
+
+
+
+<block wx:for="{{list}}" >
+        <template is="rank_list" data="{{item}}" />
+</block>
+
+
+
+<view class='more_record'>
+        ————— 更多优惠，敬请期待 ——————
+</view>

@@ -1,0 +1,15 @@
+<import src='../../../mine/collection/collection' />
+
+<view class='section_title'>
+        ——— 热门分类 ———
+        <text>FOR YOU</text>
+</view>
+<view class='hot_list'>
+        <view class='item' wx:for="{{list}}" data-id="{{item.id}}" data-name="{{item.name}}" bindtap='classicDetail'>
+                <view class='title'>
+                        {{item.name}}
+                        <text>{{item.description}}</text>
+                        <image src='{{item.icon}}'></image>
+                </view>
+        </view>
+</view>
