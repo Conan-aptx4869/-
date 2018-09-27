@@ -45,7 +45,7 @@
 </swiper>
  
 <view class='adv'>
-        <image src='{{item.abs_url}}' mode="widthFix" wx:for="{{advert}}" data-adId="{{item.ad_id}}" data-param='{{item.param}}' data-targetRule="{{item.target_rule}}"></image>
+        <image src='{{item.abs_url}}' mode="widthFix" wx:for="{{advert}}" data-adId="{{item.ad_id}}" data-param='{{item.param}}' data-targetRule="{{item.target_rule}}" bindtap='recharge'></image>
 </view>
 
 <view class='section_title'>

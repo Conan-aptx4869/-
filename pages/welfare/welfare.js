@@ -77,6 +77,12 @@ Page({
                 })
         },
 
+        //充值送积分
+        recharge:function(e){
+          wx.navigateTo({
+            url: 'recharge/recharge',
+          })
+        },
 
         //更多推荐
         recoMoreTap: function (e) {

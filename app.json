@@ -15,6 +15,7 @@
                 "pages/mine/address/address",
                 "pages/mine/address/edit/edit",
                 "pages/mine/mine",
+                "pages/welfare/recharge/recharge",
                 "pages/welfare/record/cardDetail/cardDetail",
                 "pages/welfare/exchGoodsDetail/exchGoodsDetail",
                 "pages/welfare/exchGoodsDetail/confirm/confirm",

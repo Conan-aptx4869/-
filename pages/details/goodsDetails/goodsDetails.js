@@ -4,23 +4,13 @@ var WxParse = require('../../../wxParse/wxParse.js');
 Page({
         /* 页面的初始数据*/
         data: {
-<<<<<<< HEAD
-                number: 0,
-=======
                 number: 1,
->>>>>>> 20180925
                 textArr: [],
                 isIdArr: [],
                 indicatorDots: true,
                 autoplay: true,
                 interval: 2000,
                 duration: 1000,
-
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 20180925
                 //所有图片的高度  （必须）
                 imgheights: [],
                 //图片宽度 
@@ -372,12 +362,10 @@ Page({
                                 wx.navigateTo({
                                         url: '../placeOrder/placeOrder?cart_id=' + cart_id + "&activity=" + activity,
                                 })
-<<<<<<< HEAD
-                        }, 500)
-=======
+                      
                         }, 1000)
->>>>>>> 20180925
 
+        
 
                 }
 

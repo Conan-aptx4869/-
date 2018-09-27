@@ -1,0 +1,9 @@
+<form bindsubmit="formSubmit">
+    <view class='title'>充值金额</view>
+    <label>
+      <text class='symbol'>￥</text>
+      <input name="number"/>
+    </label>
+  
+    <button formType="submit">确认支付</button>
+</form>
