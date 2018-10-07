@@ -1,7 +1,6 @@
 var https = wx.getStorageSync("https");
 var m_id = wx.getStorageSync("m_id");
 Page({
-
         /**
          * 页面的初始数据
          */
@@ -18,7 +17,7 @@ Page({
          * 生命周期函数--监听页面加载
          */
         onLoad: function (options) {
-
+ 
         },
 
 
@@ -86,12 +85,13 @@ Page({
                 var shop_list = this.data.shop_list;
                 var number = Number(shop_list[index].number);
                 number = number - 1;
-                if (number < 0) {
+                if (number <= 0) {
+                  this.deleteTap();
                         return false;
                 } else {
                         shop_list[index].number = number;
                         this.setData({
-                                shop_list: shop_list
+                              shop_list: shop_list
                         });
                         this.getTotalPrice();
                 }
@@ -112,9 +112,10 @@ Page({
         //管理
         adminTap: function () {
                 this.setData({
-                        showView: !this.data.showView
+                   showView: !this.data.showView
                 })
         },
+
 
         //计算总价
         getTotalPrice: function () {
@@ -222,6 +223,11 @@ Page({
          */
         onShow: function () {
                 var that = this;
+                that.setData({
+                  total_price:0,
+                  text2:true,
+                  select_icon: "/imgs/icon/un_checked.png",
+                })
                 wx.request({
                         url: https + "cart/cartList",
                         method: "POST",

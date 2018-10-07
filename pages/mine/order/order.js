@@ -1,8 +1,7 @@
 var https = wx.getStorageSync("https");
 Page({
   /**
-   * 页面的初始数据
-   */
+   * 页面的初始数据*/
   data: {
     cid: 0,
     page: 1,
@@ -31,7 +30,7 @@ Page({
       },
       {
         type: "退换 / 售后",
-        status: " 5,6"
+        status: "5,6"
       }
 
     ]

@@ -31,7 +31,7 @@ Page({
           pay_amounts: data.pay_amounts,
           order_id: order_id
         })
-        console.log(res)
+       // console.log(res)
       }
     })
   },
@@ -125,7 +125,7 @@ Page({
               });
               setTimeout(function () {
                 wx.navigateBack({
-                  delta: 1
+                  delta: 2
                 })
               }, 1500);
               flag = payment;
@@ -133,7 +133,7 @@ Page({
             }
              // 将支付的方式返给后台
 
-            console.log(flag)
+          
 
           }
          
