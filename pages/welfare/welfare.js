@@ -72,11 +72,20 @@ Page({
                 var goods_id = e.currentTarget.dataset.goodsid;
                 var grade = e.currentTarget.dataset.grade;
                 var grade_num = this.data.grade_num;
-                wx.navigateTo({
-                        url: 'exchGoodsDetail/exchGoodsDetail?goods_id=' + goods_id + "&grade_num=" + grade_num,
-                })
+                console.log(grade,grade_num);
+                if(grade==grade_num){
+                  wx.navigateTo({
+                    url: 'exchGoodsDetail/exchGoodsDetail?goods_id=' + goods_id + "&grade_num=" + grade_num,
+                  })
+                }else{
+                  wx.showModal({
+                    title: '提示',
+                    content: '您的当前等级不够',
+                  })
+                }
+               
         },
-
+ 
         //充值送积分
         recharge:function(e){
           wx.navigateTo({

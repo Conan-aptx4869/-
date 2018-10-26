@@ -13,7 +13,7 @@ Page({
          * 生命周期函数--监听页面加载
          */
         onLoad: function (options) {
-
+            console.log(m_id)
         },
 
         //编辑
@@ -166,6 +166,7 @@ Page({
                                 that.setData({
                                         address_list: address_list
                                 });
+                                console.log(address_list)
                                    
                         }
                 })

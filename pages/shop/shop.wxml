@@ -9,10 +9,10 @@
                                 <view class="label-1__icon">
                                         <view class='invalid' wx:if="{{item.status==null || item.status==0}}"> 失效</view>
                                        
-                                        <view class="label-1__icon-checked">
+                                        <view class="label-1__icon-checked" wx:if='{{item.status==1}}'>
                                                 <image src="{{item.checked?'/imgs/icon/checked.png':'/imgs/icon/un_checked.png'}}"></image>
                                         </view>
-                                </view>
+                                </view> 
                         </label>
                          <view class='content'>
                                 <image class='photo' src='{{item.cover}}'></image>

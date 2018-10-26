@@ -8,7 +8,6 @@ Page({
                 showView: false,
                 shows: true,
                 select_icon: "/imgs/icon/un_checked.png",
-                
                 text2: true,
                 total_price: 0,
                 hidden: false
@@ -192,19 +191,20 @@ Page({
                 //  console.log(shop_list);
                 var cartArr = [];
                 for (let i = 0; i < shop_list.length; i++) {
-                        if (shop_list[i].checked == true) {
+                        if (shop_list[i].checked == true && shop_list[i].status==1) {
                                 cartArr.push(shop_list[i].cart_id);
                         }
                 }
 
                 var cart_id = cartArr.join(",");
-                console.log(cart_id);
                 if (cart_id == "" || cart_id == []) {
                         wx.showModal({
                                 title: '提示',
                                 content: '您还没有选择商品',
                         })
-                } else {
+                } else if(true){
+
+                }else {
                         wx.navigateTo({
                                 url: '../details/placeOrder/placeOrder?cart_id=' + cart_id + "&activity=" + activity,
                         })
