@@ -1,5 +1,4 @@
 @import "../../common/common.wxss";
-
 page {
         padding: 0.1rpx;
 }

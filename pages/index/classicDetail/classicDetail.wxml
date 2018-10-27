@@ -11,7 +11,7 @@
                 </view>
                 <view class='discount'>折扣卡价 ￥{{item.discount_card_price}}</view>
         </view>
-</template>
+</template> 
 
 
 <view class='head'>
@@ -23,7 +23,7 @@
                 </view>
                 <block wx:for="{{list}}">
                         <view class='item' data-id="{{item.id}}" data-parentId="{{item.parent_id}}" bindtap='classicDetailTap' data-name="{{item.name}}">
-                                <image src='{{item.icon}}'></image>
+                                <image src='{{item.icon}}' class='{{cate_id==item.id?"selected":""}}'></image>
                                 {{item.name}}
                         </view>
                 </block>

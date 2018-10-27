@@ -1,7 +1,7 @@
 var m_id = wx.getStorageSync("m_id");
 var https = wx.getStorageSync("https");
 Page({
-
+ 
         /* 页面的初始数据*/
         data: {
                 sort: [
@@ -11,7 +11,6 @@ Page({
                 ],
                 showView: false,
                 sortId: 0,
-
                 n_sort: 3,
                 page: 1,
                 noBody: false,
@@ -28,7 +27,7 @@ Page({
                 var titleName = options.name;
                 var that = this;
                 wx.setNavigationBarTitle({
-                        title: titleName,
+                        title: titleName==="undefined"?"热门分类":titleName,
                 })
                 this.setData({
                         parentId: parentId,
@@ -59,7 +58,6 @@ Page({
                 var cate_id = e.currentTarget.dataset.id;
                 var name = e.currentTarget.dataset.name;
                 var n_sort = this.data.n_sort;
-
                 wx.setNavigationBarTitle({
                         title: name,
                 });
@@ -94,17 +92,12 @@ Page({
                                                 goods: lists,
                                                 page: page
                                         });
-                                        console.log("空对象")
                                 } else {
                                         that.setData({
                                                 goods: lists,
                                                 page: page
                                         });
-                                }
-
-                                // console.log(goods);
-                                // console.log(lists)
-                                // console.log(old_list2);
+                                }                         
                         }
                 })
         }, 
@@ -147,7 +140,6 @@ Page({
                                         for (var i = 0; i < goods.length; i++) {
                                                 goods[i].isStar = 0
                                         }
-                                        console.log(goods)
                                         that.setData({
                                                 goods: goods,
                                         })

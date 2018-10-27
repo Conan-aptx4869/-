@@ -15,7 +15,6 @@ Page({
         onLoad: function (options) {
                 var parentId = options.parentId;
                 var titleName = options.titleName;
-
                 this.setData({
                         parentId: parentId,
                         titleName: titleName
@@ -37,23 +36,14 @@ Page({
                                 });
                                 console.log(res)
                         }
-
                 })
         },
 
         classicDetail: function (e) {
                 var parentId = this.data.parentId;
-                // var titleName = this.data.titleName;
-                // var pages = getCurrentPages();
-                // var prevPage = pages[pages.length - 2];
-                // prevPage.setData({
-                //         titleName: titleName
-                // });
-                // wx.navigateBack({
-                //         delta: 1
-                // })
                 var name = e.currentTarget.dataset.name;
                 var cate_id = e.currentTarget.dataset.id;
+                console.log("cate_id: " + cate_id)
                 wx.redirectTo({
                         url: '../classicDetail?name=' + name + "&cate_id=" + cate_id+ "&parentId=" + parentId,
                 })

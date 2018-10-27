@@ -102,11 +102,9 @@ App({
                                                 obj[picList[i].id] = true;
                                         }
                                 }
-                                console.log("数组去重");
                                 if (imgSrc.length >= 1 ){
                                         wx.setStorageSync("imgSrc", imgSrc)
                                 }
-                                console.log(picList)
                                 //这里可能有BUG，失败也会执行这里,所以这里应该是后台返回过来的状态码为成功时，这里的success才+1                 
                         },
                         fail: (res) => {
