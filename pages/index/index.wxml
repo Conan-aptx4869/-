@@ -2,115 +2,118 @@
 <import src="../common/common" />
 <import src="classicDetail/classicDetail" />
 <template name="swiper">
-        <swiper-item data-rule="{{item.target_rule}}" data-id="{{item.ad_id}}">
-                <image src="{{item.abs_url}}" class="slide-image" mode="widthFix" data-param="{{item.param}}" data-targetRule="{{item.target_rule}}" bindload="imageLoad" />
-        </swiper-item>
+  <swiper-item data-rule="{{item.target_rule}}" data-id="{{item.ad_id}}">
+    <image src="{{item.abs_url}}" class="slide-image" mode="widthFix" data-param="{{item.param}}" data-targetRule="{{item.target_rule}}" bindload="imageLoad" />
+  </swiper-item>
 </template>
 
 <view class='tab'>
-        <view class='tab_item {{tabItemId==index?"currnet":""}}' wx:for="{{tabArr}}" data-id="{{index}}" bindtap='tabTap' data-param="{{item.param}}">{{item.name}}</view>
+  <view class='tab_item {{tabItemId==index?"currnet":""}}' wx:for="{{tabArr}}" data-id="{{index}}" bindtap='tabTap' data-param="{{item.param}}">{{item.name}}</view>
 </view>
 
 
 <template name="scroll_goods">
-        <view class='item' data-id='{{item.goods_id}}' bindtap='detailTap' data-activity="{{item.activity}}">
-                <image src='{{item.cover}}'></image>
-                <view class='name ellips'>{{item.goods_name}}</view>
-                <text class='new_price'>￥{{item.price}}</text>
-                <text class='old_price'>￥{{item.market_price}}</text>
-                <view class='limit'>限时特卖</view>
-        </view>
+  <view class='item' data-id='{{item.goods_id}}' bindtap='detailTap' data-activity="{{item.activity}}">
+    <image src='{{item.cover}}'></image>
+    <view class='name ellips'>{{item.goods_name}}</view>
+    <text class='new_price'>￥{{item.price}}</text>
+    <text class='old_price'>￥{{item.market_price}}</text>
+    <view class='limit'>限时特卖</view>
+  </view>
 
 </template>
 
 
 <!--1  -->
 <view class='tab_container' wx:if="{{tabItemId==0}}">
-        <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-dots="true" indicator-active-color="white" style="height:{{imgheights[current]}}rpx;">
-                <block wx:for="{{imgUrls}}">
-                        <template is="swiper" data="{{item}}" />
-                </block>
-        </swiper>
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-dots="true" indicator-active-color="white" style="height:{{imgheights[current]}}rpx;">
+    <block wx:for="{{imgUrls}}">
+      <template is="swiper" data="{{item}}" />
+    </block>
+  </swiper>
 
 
-        <view class='handle'>
-                <view class='cust' bindtap='cusTap' style='background-image:url({{dz.abs_url}})' data-adId="{{dz.ad_id}}" data-param="{{dz.param}}" data-targetRule="{{dz.target_rule}}">
-                        <!-- <view class='title'>我要定制</view>
+  <view class='handle'>
+    <view class='cust' bindtap='cusTap' style='background-image:url({{dz.abs_url}})' data-adId="{{dz.ad_id}}" data-param="{{dz.param}}" data-targetRule="{{dz.target_rule}}">
+      <!-- <view class='title'>我要定制</view>
                         <text>My customization</text>
                         <view class='explain'>定制一个有温度的家</view> -->
-                </view>
-                <view class='right_handle'>
-                        <view class='top_handle'>
-                                <view class='section' style='background-image:url({{qd.abs_url}})' data-adId="{{qd.ad_id}}" data-param="{{qd.param}}" data-targetRule="{{qd.target_rule}}" bindtap="showDialogBtn">
-                                        <!-- 每日签到
+    </view>
+    <view class='right_handle'>
+      <view class='top_handle'>
+        <view class='section' style='background-image:url({{qd.abs_url}})' data-adId="{{qd.ad_id}}" data-param="{{qd.param}}" data-targetRule="{{qd.target_rule}}" bindtap="showDialogBtn">
+          <!-- 每日签到
                                          <text>连续签到，积分递增</text> -->
-                                </view>
-                                <view class='section' style='background-image:url({{jf.abs_url}})' data-adId="{{jf.ad_id}}" bindtap='integralTap' data-param="{{jf.param}}" data-targetRule="{{jf.target_rule}}">
-                                        <!-- 会员积分
+        </view>
+        <view class='section' style='background-image:url({{jf.abs_url}})' data-adId="{{jf.ad_id}}" bindtap='integralTap' data-param="{{jf.param}}" data-targetRule="{{jf.target_rule}}">
+          <!-- 会员积分
                                         <text>做活动得积分</text> -->
-                                </view>
-                        </view>
-                        <view class='activity' style='background-image:url({{hd.abs_url}})' data-adId="{{hd.ad_id}}" bindtap='activityTap' data-param="{{hd.param}}" data-targetRule="{{hd.target_rule}}">
-
-                        </view>
-                </view>
         </view>
+      </view>
+      <view class='activity' style='background-image:url({{hd.abs_url}})' data-adId="{{hd.ad_id}}" bindtap='activityTap' data-param="{{hd.param}}" data-targetRule="{{hd.target_rule}}">
 
-        <view class='adv' wx:for="{{adv}}">
-                <image src='{{item.abs_url}}' mode="widthFix" data-targetRule="{{item.target_rule}}" data-adId="{{item.ad_id}}" data-param="{{item.param}}" bindtap='activityTap'></image>
-        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class='adv' wx:for="{{adv}}">
+    <image src='{{item.abs_url}}' mode="widthFix" data-targetRule="{{item.target_rule}}" data-adId="{{item.ad_id}}" data-param="{{item.param}}" bindtap='activityTap'></image>
+  </view>
 
 
-        <view class='scroll_goods'>
-                <block wx:for="{{goods}}">
-                        <template is='scroll_goods' data="{{item}}" />
-                </block>
-        </view>
+  <view class='scroll_goods'>
+    <block wx:for="{{goods}}">
+      <template is='scroll_goods' data="{{item}}" />
+    </block>
+  </view>
 
 
-        <template is="title" />
 
-       <view class='goods_listy'>
-                <block wx:for="{{best}}">
-                        <template is="hot_goods" data="{{item:item,index:index}}" />
-                </block>
-        </view>
+
+
 </view>
 <!--1  -->
 
 <!--2  -->
 <view class='tab_container' wx:else>
-        <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-dots="true" indicator-active-color="white" style="height:{{imgheights[current]}}rpx;">
-                <block wx:for="{{imgUrls}}">
-                        <template is="swiper" data="{{item}}" />
-                </block>
-        </swiper>
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-dots="true" indicator-active-color="white" style="height:{{imgheights[current]}}rpx;">
+    <block wx:for="{{imgUrls}}">
+      <template is="swiper" data="{{item}}" />
+    </block>
+  </swiper>
 
 
 
-        <view class='classic_title'>热门分类 </view>
-        <view class='classic_list'>
-                <block wx:for="{{list}}">
-                        <view class='item' bindtap='classicDetailTap' data-id="{{item.id}}" data-parentId="{{item.parent_id}}" data-name="{{item.name}}">
-                                <image src='{{item.icon}}'></image>
-                                {{item.name}}
-                        </view>
-                </block>
-        </view>
-        <view class='adv'>
-                <block wx:for="{{adv}}">
-                        <image src='{{item.abs_url}}' mode="widthFix" data-targetRule="{{item.target_rule}}" data-adId="{{item.ad_id}}" data-param="{{item.param}}" bindtap='activityTap'></image>
-                </block>
-        </view>
+  <view class='classic_title'>热门分类 </view>
+  <view class='classic_list'>
+    <block wx:for="{{list}}">
+      <view class='item' bindtap='classicDetailTap' data-id="{{item.id}}" data-parentId="{{item.parent_id}}" data-name="{{item.name}}">
+        <image src='{{item.icon}}'></image>
+        {{item.name}}
+      </view>
+    </block>
+  </view>
+  <view class='adv'>
+    <block wx:for="{{adv}}">
+      <image src='{{item.abs_url}}' mode="widthFix" data-targetRule="{{item.target_rule}}" data-adId="{{item.ad_id}}" data-param="{{item.param}}" bindtap='activityTap'></image>
+    </block>
+  </view>
 
-        <view class='scroll_goods'>
-                <view class='item' wx:for="{{goods}}">
-                        <template is='scroll_goods' data="{{item}}" />
-                </view>
-        </view>
+  <view class='scroll_goods'>
+    <view class='item' wx:for="{{goods}}">
+      <template is='scroll_goods' data="{{item}}" />
+    </view>
+  </view>
 
 </view>
+<!--2 -->
 
+<template is="title" />
+<view class='goods_listy'>
+  <block wx:for="{{best}}">
+    <template is="hot_goods" data="{{item:item,index:index}}" />
+  </block>
+</view>
 
 <!-- <button open-type='getUserInfo' >获取授权</button> -->
 
@@ -119,14 +122,12 @@
 
 <view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
 <view class="modal-dialog" wx:if="{{showModal}}">
-        <view class="modal-content">
-                <image class='photo' src="{{item.abs_url}}" wx:for="{{advert}}" data-adId="{{item.ad_id}}" data-targetRule="{{item.target_rule}}" data-param="{{item.param}}"></image>
-                <view class='text2'>{{message}}</view>
-                <view class='text3' wx:if="{{text3!=undefiend}}">获得 {{text3}} 积分</view>
-        </view>
-        <view class="modal-footer">
-                <view class="btn-confirm" bindtap="onConfirm" data-status="confirm">确定</view>
-        </view>
+  <view class="modal-content">
+    <image class='photo' src="{{item.abs_url}}" wx:for="{{advert}}" data-adId="{{item.ad_id}}" data-targetRule="{{item.target_rule}}" data-param="{{item.param}}"></image>
+    <view class='text2'>{{message}}</view>
+    <view class='text3' wx:if="{{text3!=undefiend}}">获得 {{text3}} 积分</view>
+  </view>
+  <view class="modal-footer">
+    <view class="btn-confirm" bindtap="onConfirm" data-status="confirm">确定</view>
+  </view>
 </view>
-
-
