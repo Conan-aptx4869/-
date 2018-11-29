@@ -3,7 +3,7 @@
 <import src="classicDetail/classicDetail" />
 <template name="swiper">
   <swiper-item data-rule="{{item.target_rule}}" data-id="{{item.ad_id}}">
-    <image src="{{item.abs_url}}" class="slide-image" mode="widthFix" data-param="{{item.param}}" data-targetRule="{{item.target_rule}}" bindload="imageLoad" />
+    <image src="{{item.abs_url}}" class="slide-image" mode="widthFix" data-param="{{item.param}}" data-targetRule="{{item.target_rule}}" bindtap='wheelJump' bindload="imageLoad" />
   </swiper-item>
 </template>
 

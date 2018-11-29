@@ -146,7 +146,6 @@ Page({
           best: best,
           adv: adv,
         })
-        console.log(res)
       }
     })
   },
@@ -297,6 +296,55 @@ Page({
 
     })
   },
+
+  // 轮播图跳转
+  wheelJump(e){
+    const param = Number(e.currentTarget.dataset.param);
+    const rule = Number(e.currentTarget.dataset.targetrule);
+    console.log(rule,param)
+    switch (rule) {
+      case 0: //不跳转
+        break;
+      case 1: //分类商品类表
+        wx.navigateTo({
+          url: '../index/classicDetail/classicDetail?parentId=' + parent_id + "&cate_id=" + param + "&name=" + title,
+        });
+        break;
+      case 2: //专题商品列表
+        wx.navigateTo({
+          url: '../index/popularActivity/popularActivity?param=' + param,
+          
+        });
+
+        break;
+      case 3: //商品详情
+        wx.navigateTo({
+          url: '../details/goodsDetails/goodsDetails?goods_id=' + param,
+        });
+        break;
+      case 4: //积分商城
+        wx.switchTab({
+          url: '../welfare/welfare'
+        });
+        break;
+      case 5: //积分商城详情
+        wx.navigateTo({
+          url: '../welfare/exchGoodsDetail/exchGoodsDetail?goods_id=' + param,
+        });
+        break;
+      case 6: //答题活动页
+        wx.navigateTo({
+          url: '../welfare/task/task'
+        });
+        break;
+      case 7: //我要定制
+        wx.navigateTo({
+          url: '../index/customized/customized'
+        });
+        break;
+    }
+  },
+
   /* 页面上拉触底事件的处理函数*/
   onReachBottom: function() {
 
